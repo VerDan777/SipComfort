@@ -2,9 +2,49 @@
     background-color: #fafcf9;
     padding: 100px 0;
     display: flex;
+    position: relative;
 
+    &::after {
+        content: url('./img/sip2.png');
+        position: absolute;
+        right: -250px;
+
+    }
     &__bg {
         // box model
         height: 700px;
+        img {
+        box-shadow: 0px 0px 32px 1px rgba(0,0,0,0.75);
+        }
+    }
+
+    &__block {
+        padding-left: 50px;
+    }
+
+    &__container {
+        margin-left: 40px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    &__item {
+        position: relative;
+        margin-right: 60px;
+        width: 300px;
+        display: inline-block;
+    }
+
+    &__pic {
+        position: absolute;
+        top: 15px;
+        left: -40px;
+
     }
 }

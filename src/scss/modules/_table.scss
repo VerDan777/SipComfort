@@ -1,0 +1,38 @@
+.table {
+    padding-right: 10px;
+
+    td {
+        // display: flex;
+    }
+
+    &__row {
+        display: inline-block;
+        padding-bottom: 25px;
+    }
+
+    &__date {
+        @include font(#7e8082,$mainFont,3rem, bold);
+        display: inline-block;
+        width: 115px;
+        text-transform: uppercase;
+        border-right: 1px solid #e5e5e5;
+        display: inline-block;
+
+        sub {
+            @include font(#4b4e53,$mainFont,1.125rem, bold);
+            display: inline-block;
+        }
+    }
+    &__tech {
+        width: 300px;
+        padding-left: 10px;
+
+        @include font(#4b4e53, $mainFont,1.125rem, 600);
+        text-transform: uppercase;
+
+        span {
+            font-weight: 100;
+            font-size: 0.8125rem;
+        }
+    }
+}

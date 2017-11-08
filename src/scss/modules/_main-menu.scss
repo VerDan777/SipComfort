@@ -7,6 +7,10 @@
         margin: 0;
         padding-top: 25px;
 
+        &--footer {
+            padding-top: 0;
+            padding-bottom: 50px;
+        }
     }
 
     &__item {
@@ -21,5 +25,9 @@
         @include font(#4b4e53,$mainFontThin,1rem, 300);
         text-transform: uppercase;
         text-decoration: none;
+
+        &--footer {
+            @include font(#000000,$mainFontSemiBold,0.875rem, bold);
+        }
     }
 }

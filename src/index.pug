@@ -11,7 +11,7 @@ body
     header.site-header
         nav.main-nav: .container
             .main-nav__container
-                .logo.logo--header: img(src="./img/logo.png", alt="логотип сипкомфорт")
+                .logo--header: img(src="./img/logo.png", alt="логотип сипкомфорт")
                 nav.main-menu
                     ul.main-menu__list
                         -var menu = ['Главная','Проекты', 'Цены', 'Технологии', 'Ответ', 'О компании']
@@ -24,10 +24,10 @@ body
                     .hero__top
                         .hero__build
                             h3.hero__build-title Построим дом своей мечты вместе с СИПкомфорт
-                            p.hero__text Мы§ предлагаем нашим клиентам качественную и быструю постройку комфортабельных домов из СИП-панелей по вашим  и нашим проектам.
+                            p.hero__text Мы предлагаем нашим клиентам качественную и быструю постройку комфортабельных домов из СИП-панелей по вашим  и нашим проектам.
                         .hero__info
                             h2.hero__action Звоните сейчас!
-                            p.hero__text Мы готовы ответить на все ваши вопросы
+                            p.hero__text.hero__text--nopd Мы готовы ответить<br> на все ваши вопросы
                             span.hero__call +7 (4012) 40-01-80
                             span.hero__call +7 (952) 112-03-04
                             h2.hero__action или пишите
@@ -40,13 +40,13 @@ body
                             a.button(href="#") Написать
 
                 .hero__motto
-                    .hero__main-title Комфортные дома из сип-панелей от Производителей
-                    .hero__main-text Строительство домов и разработка документации «ПОД КЛЮЧ» постройте дом своей мечты
+                    .hero__main-title Комфортные&nbsp;дома из сип-&nbsp;панелей от&nbsp;Производителя
+                    .hero__main-text Строительство домов и разработка проектной документации «ПОД КЛЮЧ» постройте дом своей мечты
 
         section.features: .container
             .features__container
                 .section__block
-                    h4.section__title Комфортные <br>дома из<br><span>Сип-панелей</span>
+                    h4.section__title Комфортные <br>дома из<br><b>Сип-&nbsp;панелей</b>
                     p.section__text Преимущества строительства домов по<br>технологии СИП-панелей
                 
                 .features__block
@@ -64,7 +64,7 @@ body
                         li.features__item
                             img.features__pic(src="./img/icons/factory.png" alt="строительство под ключ")
                             h3.features__title  Собственное производство
-                            p.features__text Собственное производство СИП-панелей, гарантия качетства
+                            p.features__text Собственное производство СИП-панелей, гарантия<br>качетства
 
                         li.features__item
                             img.features__pic(src="./img/icons/paint-roller.png" alt="строительство под ключ")
@@ -83,26 +83,26 @@ body
 
         section.project
             .project__container
-                article.project.project--all
-                    .section__block.section--block--center
-                        h4.section__title Популярные<br>проекты наших<br> <span>Домов</span>
-                        p.section__text Комфорт и качество наших домов гарантирован
-                        a.button.button--section(href="#") Все проекты
-                article.project.project--first
+                article.project__item.project--all
+                    //- .section__block.section__block--center
+                    //-     h4.section__title Популярные<br>проекты наших<br><b>Домов</b>
+                    //-     p.section__text Комфорт и качество наших домов гарантирован
+                    //-     a.button.button--section(href="#") Все проекты
+                article.project__item.project--first
                     .project__left
                         .project__name Проекты<br> Дачник 0029
                     .project__right
                         .project__square 126 m<sup>2</sup>
                         .project__price 710 000 РУБ
 
-                article.project.project--second
+                article.project__item.project--second
                     .project__left
                         .project__name Проекты<br> Дачник 0029
                     .project__right
                         .project__square 126 m<sup>2</sup>
                         .project__price 710 000 РУБ
 
-                article.project.project--third
+                article.project__item.project--third
                     .project__left
                         .project__name Проекты<br> Дачник 0029
                     .project__right
@@ -113,8 +113,8 @@ body
             .advantages__bg
                 img(src="./img/kitchen.png")
             .advantages__container
-                .section__block
-                    h4.section__title Преимущества домов из <span>Сип-панелей</span>
+                .section__block.section__block--advantages
+                    h4.section__title Преимущества домов из<br><b>Сип-панелей</b>
                     p.section__text Стротельство домов из СИП-панелей нетолько достаточно экономично, но также имеет ряд преимущества, по сравнению с традиционными технологиями:
                 .advantages__block
                     ul.advantages__list
@@ -122,11 +122,11 @@ body
                             li.advantages__item
                                 img.advantages__pic(src=imgURL alt=alt)
                                 h3.advantages__title=title
-                            p.advantages__text=text
-                        +advantages('./img/icons/eco.png','Экологичность','Дома из СИП-панелей отвечают всем требованиям экологической безопасностей','экологичность')
-                        +advantages('./img/icons/termo.png','Термоизоляция','Дома из СИП очень энергоэффективны, что позволяет их хозяевам платить за отопление меньше, чем хозяевам обычных домов.Экономия может составлять до 45%.','термоизоляция')
+                                p.advantages__text=text
+                        +advantages('./img/icons/eco.png','Экологичность',' Дома из СИП-панелей отвечают всем требованиям экологической безопасности. ОСП и пенополистирол — экологически чистые материалы. Дома из СИП-панелей гипоалергенны, в них могут проживать люди, страдающие от аллергии или астмы.','экологичность')
                         +advantages('./img/icons/speed-build.png','Скорость возведения','Комплект дома предварительно изготавливается в цехе  и на место строительство привозится в виде готовых монтаж деталей: стен, перекрытий и кровли.Поэтому, мы можем обеспечить достаточно высокий темп строительства.','обустройство помещений')
-                        +advantages('./img/icons/easy-build.png','Легкость отделки','СИП-панели представляют собой идеально ровные гладкие плоскости, в большинстве случаев требующие лишь финишной отделки без какой-либо предварительной подготовки')
+                        +advantages('./img/icons/termo.png','Термоизоляция','Дома из СИП очень энергоэффективны, что позволяет их хозяевам платить за отопление меньше, чем хозяевам обычных домов.Экономия может составлять до 45%.','термоизоляция')
+                        +advantages('./img/icons/column.png','Легкость отделки','СИП-панели представляют собой идеально ровные гладкие плоскости, в большинстве случаев требующие лишь финишной отделки без какой-либо предварительной подготовки')
         
         section.promo: .container
             .promo__container
@@ -134,48 +134,57 @@ body
                 a.button(href="#") Написать нам
         
         section.excellence: .container
-            .excellence__left
-                .section__block
-                    h4.section__title Преимущества домов из <span>Сип-панелей</span>
-                    p.section__text Стротельство домов из СИП-панелей нетолько достаточно экономично, но также имеет ряд преимущества, по сравнению с традиционными технологиями:
-                    a.button(href="#") Заказать
-            .excellence__right
-                .excellence__bg
-                .excellence__description
-                    .excellence__img: img(src="./img/" alt="сип-панель")
-                    .excellence__description-content
-                        h3.advantages__title Технология
+            .excellence__container
+                .excellence__left
+                    .section__block.section__block--excellence
+                        h4.section__title Преимущества домов из <span>Сип-панелей</span>
+                        p.section__text Мы предлагаем нашим клиентам качественную и быструю постройку комфортабельных домов из СИП-панелей по вашим и нашим проектам. У нас есть большой выбор уже существующих проектов домов, так же мы измененим понравившийся вам проект по вашему желанию совершенно бесплатно. А если необходимо то разработаем новый проект с нуля или по вашим зарисовкам.
+                        p.section__text У нас есть собственное производство СИП-панелей, поэтому панели всегда есть в наличии и под заказ в любом количестве.
+                        p.section__text Наша стройгруппа способна решать вопросы не только монтажа в указанной комплектации «серого ключа», но и вести генподряд под «чистый ключ», включая изготовление ограждений участков, септиков, дренажных работ, планировки участков. А при необходимости наши партнеры изготовят вам лестницы и мебель под ваш интерер.
+
+
+                    a.button.button--small(href="#") Заказать
+                .excellence__right
+                    .excellence__bg
+                    .excellence__description
+                        .excellence__img: img(src="./img/" alt="сип-панель")
+                        .excellence__description-content
+                            h3.advantages__title Технология
+                            p.advantages__text Структурно-Изолированная Панель (Structural Insulated Panel) — состоят из двух плит ОСП-3 (OSB-3) и теплоизолирующего слоя пенополистирола между ними.
+                            p.advantages__text СИП-панели обладают высокой несущей способностью и высокими термоизоляционными свойствами. Использование СИП-панелей позволяет уменьшить тольщину стен, тем самым снизить нагрузку на фундамент. Также использование СИП-панелей позволяет вести строительство дома при отрицательных температурах, то есть практически круглогодично.
         
-        section.news
+        section.news: .container
             .news__container
                 .news__left
-                    .section__block
+                    .section__block.section__block--news
                         h4.section__title Новости
-                        p.section__text Новости и советы о строительстве СИП-домов
+                        p.section__text Новости и советы о строительстве<br>СИП-домов
                     table.table
-                        tr.table_row
-                            td.table__date 21 сен
-                            td.table__tech Новые технологии СИП<br> новости
+                        tr.table__row
+                            td.table__date 21 <sub>сен</sub>
+                            td.table__tech Новые технологии СИП<br> <span>новости</span>
                             td.table__content Мы прелагаем нашим клиентам быструю постройку комфортабельных домов из СИП-панелей по вашим и нашим проектам. У нас есть большой выбор уже существующих проектов домов, так же мы измерим понравившийся вам проект по вашему желанию совершенно бесплатно.
-                        tr.table_row
-                            td.table__date 20 сен
-                            td.table__tech Новые технологии СИП<br> новости
+                        tr.table__row
+                            td.table__date 20 <sub>сен</sub>
+                            td.table__tech Новые технологии СИП<br> <span>новости</span>
                             td.table__content Мы прелагаем нашим клиентам быструю постройку комфортабельных домов из СИП-панелей по вашим и нашим проектам. У нас есть большой выбор уже существующих проектов домов, так же мы измерим понравившийся вам проект по вашему желанию совершенно бесплатно.
-                        tr.table_row
-                            td.table__date 17 сен
-                            td.table__tech Новые технологии СИП<br> новости
+                        tr.table__row
+                            td.table__date 17 <sub>сен</sub>
+                            td.table__tech Новые технологии СИП<br> <span>новости</span>
                             td.table__content Мы прелагаем нашим клиентам быструю постройку комфортабельных домов из СИП-панелей по вашим и нашим проектам. У нас есть большой выбор уже существующих проектов домов, так же мы измерим понравившийся вам проект по вашему желанию совершенно бесплатно.
-        
+                .news__right
+                    .news_bg
+                        img.news__pic(src="./img/news-bg.png")
         footer.site-footer: .container
             .site-footer__container
-                .logo.logo--footer: img(src="./img/logo.png")
+                .logo--footer: img(src="./img/logo-footer.png")
                 .site-footer__block
                     nav.main-menu.main-menu--footer
-                        ul.main-menu__list
+                        ul.main-menu__list.main-menu__list--footer
                             -var menu = ['Главная','Проекты', 'Цены', 'Технологии', 'Ответ', 'О компании']
                             -var menuLinks = ['#home','#projects','#price','#techology','#feedback','#about']
                                 each item,key in menu
-                                    li.main-menu_item: a.main-menu__link.main-menu__link--footer(href=menuLinks[key])=menu[key]
+                                    li.main-menu__item: a.main-menu__link.main-menu__link--footer(href=menuLinks[key])=menu[key]
                     p.site-footer__text Мы предлагаем нашим клиентам качественную и быструю постройку комфортабельных домов из СИП-панелей по вашим и нашим проектам. Наша стройгруппа способна решать вопросы монтажа и вести генподряд под "чистый ключ".
                 .site-footer__block
                     .socials
@@ -187,3 +196,4 @@ body
                                     li.socials__item
                                         a.socials__link(href=socialsLink[key])
                                             img.socials__img(src=socials[key] alt=socialsAlt[key])
+                    .site-footer__author @katz cant read 2017

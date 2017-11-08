@@ -1,11 +1,33 @@
 .site-footer {
-    height: 350px;
+    // height: 350px;
     background-color: #e2f6d8;
-    padding-top: 60px;
-    padding-bottom: 85px;
+    // padding-top: 60px;
+    // padding-bottom: 85px;
 
     &__container {
+        padding-top: 60px;
+        padding-bottom: 60px;
         display: flex;
         justify-content: space-between;
+    }
+
+    &__text {
+        @include font(#000,$mainFontSemiBold,1rem,300);
+        opacity: 0.7;
+    }
+
+    &__block {
+       padding-right: 50px;
+    }
+
+    &__author {
+        text-transform: uppercase;
+        @include font(#000000,$mainFont,0.75rem, 300);
+        opacity: 0.7;
+    }
+
+    &__img {
+        // border: 1px solid  #d1ebc4;
+        // border-radius: 50%; 
     }
 }

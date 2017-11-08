@@ -13,8 +13,15 @@
     border: 1px solid $white;
     text-transform: uppercase;
 
+    &--small {
+        padding: 15px 30px;
+        border: 2px solid #c5c2c2;
+        color: #000000;
+        margin-top: 20px;
+    }
+
     &:last-child {
-        margin: 0;
+        margin-right: 0;
     }
 
     &__container {

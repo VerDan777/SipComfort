@@ -4,6 +4,23 @@
         border-left: 2px solid $accent;
         padding-left: 30px;
         height: 250px;
+        // width: 520px;
+
+        &--center {
+            // @include centerer;
+        }
+        &--advantages {
+            margin-left: 45px;
+            width: 520px;
+            margin-bottom: 30px;
+        }
+        &--excellence {
+            width: 570px;
+            height: auto;
+        }
+        &--news {
+            height: 150px;
+        }
     }
     &__title {
         // typography
@@ -11,11 +28,18 @@
         text-transform: uppercase;
         margin: 0;
         padding-bottom: 40px;
+
+        b {
+            color: #4b4e53;
+            font-weight: bold;
+        }
     }
     &__text {
         // typography
         @include font(#4b4e53, $mainFont, 1rem, 100);
         line-height: 1.5;
+        display: block;
         margin: 0;
+        margin-bottom: 20px;
     }
 }
