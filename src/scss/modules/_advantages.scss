@@ -1,0 +1,10 @@
+.advantages {
+    background-color: #fafcf9;
+    padding: 100px 0;
+    display: flex;
+
+    &__bg {
+        // box model
+        height: 700px;
+    }
+}

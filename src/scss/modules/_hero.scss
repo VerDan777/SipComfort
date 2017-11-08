@@ -1,0 +1,115 @@
+.hero {
+    // box model
+    min-height: 750px;
+    width: 100%;
+
+    // visual
+    background-image: url('./img/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 70px 67px -20px rgba(0,0,0,0.24);
+    position: relative;
+
+   &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($form, 0.3);
+    }
+
+    &__container {
+        // box model
+        display: flex;
+
+    }
+
+    &__form {
+        // positioning
+        position: relative;
+        z-index: 1;
+        // box model
+        width: 500px;
+        margin: 50px 0;
+        padding: 70px 50px;
+
+        // typography
+        background-color: rgba($form ,0.2);
+
+        // visual
+        border: 3px solid $accent;
+    }
+
+    &__motto {
+        // positioning
+        position: relative;
+        z-index: 1;
+
+        // box model
+        display: inline-block;
+        margin: 150px;
+        height: 375px;
+        margin-left: 10%;
+        padding-left: 50px;
+        border-left: 2px solid $white;
+    }
+
+    &__top {
+        // box model
+        display: flex;
+
+    }
+
+    &__info {
+        // box model
+        text-align: right;
+    }
+
+    &__build-title {
+        // box model
+        padding-bottom: 40px;
+        margin: 0;
+
+        // typography
+        @include font($white,$mainFont,1.5rem,500);
+    }
+
+    &__text {
+        // typography
+        @include font($text,$mainFont,1rem,500);
+        line-height: 1.5;
+    }
+
+    &__action {
+        // typography
+        @include font($accent,$mainFont,1.2rem, 500);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    &__call {
+        // box model
+        display: block;
+        padding-bottom: 30px;
+        
+        @include font($white, $mainFont, 1.875rem, bold);
+    }
+
+    &__main-title {
+        // typography
+        @include font($white,$mainFontSemiBold,3.75rem, 100);
+        text-transform: uppercase;
+        padding-bottom: 30px;
+    }
+    &__main-text {
+        
+        // typography
+        @include font($white, $mainFont, 1.5rem, 100);
+        text-transform: uppercase;
+        line-height: 1.5;
+    }
+}

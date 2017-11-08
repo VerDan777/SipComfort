@@ -1,0 +1,31 @@
+.promo {
+    position: relative;
+    background-image: url('./img/promo.png');
+    background-size: cover;
+    background-position: center center;
+    height: 160px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba($form, 0.3);
+    }
+
+    &__container {
+        padding: 60px 0;
+    }
+
+    &__title {
+        position: relative;
+        z-index: 1;
+        @include font($white,$mainFont,24px,300);
+        text-transform: uppercase;
+        display: inline-block;
+        padding-right: 100px;
+
+    }
+}

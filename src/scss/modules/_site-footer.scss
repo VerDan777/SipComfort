@@ -1,0 +1,11 @@
+.site-footer {
+    height: 350px;
+    background-color: #e2f6d8;
+    padding-top: 60px;
+    padding-bottom: 85px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+}

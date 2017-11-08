@@ -1,0 +1,61 @@
+.features {
+    // positionining
+    position: relative;
+    // box model
+    min-height: 560px;
+    margin: 100px 0;
+    margin-bottom: 0;
+
+    &::after {
+        content: url('./img/sip.png');
+        position: absolute;
+        bottom: -150px;
+        left: -630px;
+    }
+
+    &__container {
+        // box model
+        display: flex;
+    }
+
+    &__block {
+        padding-left: 400px;
+    }
+    &__list {
+        // box model
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        // margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    &__item {
+        // positioning
+        position: relative;
+        display: inline-block;
+        padding-bottom: 60px;
+        margin-right: 50px;
+    }
+
+    &__title {
+        @include font(#65a447,$mainFont, 1rem, 300);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 0;
+        padding-top: 5px; 
+        padding-left: 50px;
+        display: inline-block;
+        vertical-align: middle; 
+    }
+    &__pic {
+        // positioning
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__text {
+        @include font(#7e8082,$mainFont, 0.875rem, 300);
+    }
+}

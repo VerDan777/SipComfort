@@ -1,0 +1,21 @@
+.section {
+
+    &__block {
+        border-left: 2px solid $accent;
+        padding-left: 30px;
+        height: 250px;
+    }
+    &__title {
+        // typography
+        @include font(#4b4e53,$mainFont,2.25rem, 100);
+        text-transform: uppercase;
+        margin: 0;
+        padding-bottom: 40px;
+    }
+    &__text {
+        // typography
+        @include font(#4b4e53, $mainFont, 1rem, 100);
+        line-height: 1.5;
+        margin: 0;
+    }
+}

@@ -1,0 +1,32 @@
+.button {
+    // positioning
+    position: relative;
+    z-index: 1;
+    // box model
+    display: inline-block;
+    text-decoration: none;
+    // width: 100px;
+    margin-right: 10px;
+    padding: 20px 75px;
+    // visual
+    @include font($white,$mainFont, 1.2rem, 500);
+    border: 1px solid $white;
+    text-transform: uppercase;
+
+    &:last-child {
+        margin: 0;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &:hover {
+        // typography
+        color: $form;
+
+        // visual
+        background-color: $white;
+        transition: 0.3s ease-in-out all;
+    }
+}
