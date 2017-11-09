@@ -18,6 +18,18 @@
         }
     }
 
+    &__title {
+        // box model
+        // typography
+        @include font(#6ea952,$mainFontSemiBold,1.125rem, 300);
+        text-transform: uppercase;
+    }
+
+    &__text {
+        @include font(#000,$mainFont, 1rem, 500);
+        line-height: 1.175;
+    }
+
     &__block {
         padding-left: 50px;
     }
@@ -44,7 +56,6 @@
     &__pic {
         position: absolute;
         top: 15px;
-        left: -40px;
-
+        left: -50px;
     }
 }

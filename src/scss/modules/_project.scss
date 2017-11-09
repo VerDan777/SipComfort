@@ -24,34 +24,32 @@
 
     }
     &__item {
-
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
     }
 
     &--all {
-        // background: none;
-        // padding-left: 160px;
-        // padding-right: 385px;
-        // box-shadow: none;
-        // position: relative;
-        // order: 1;
+        width: 934px;
+        margin: auto;
 }
     &--first {
         background-image: url('./img/project3.png');
         width: 934px;
         height: 500px;
-        order: 0;
+        // order: 0;
     }
     &--second {
         background-image: url('./img/project.png');
         width: 934px;
         height: 500px;
-        order: -1;
+        // order: -1;
     }
     &--third {
         background-image: url('./img/project2.png');
         width: 934px;
         height: 500px;
-        order: 2;
+        // order: 2;
     }
 
     &__left {

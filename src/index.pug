@@ -84,10 +84,10 @@ body
         section.project
             .project__container
                 article.project__item.project--all
-                    //- .section__block.section__block--center
-                    //-     h4.section__title Популярные<br>проекты наших<br><b>Домов</b>
-                    //-     p.section__text Комфорт и качество наших домов гарантирован
-                    //-     a.button.button--section(href="#") Все проекты
+                    .section__block.section__block--center
+                        h4.section__title Популярные<br>проекты наших<br><b>Домов</b>
+                        p.section__text Комфорт и качество наших домов гарантирован
+                        a.button.button--section(href="#") Все проекты
                 article.project__item.project--first
                     .project__left
                         .project__name Проекты<br> Дачник 0029
@@ -124,7 +124,7 @@ body
                                 h3.advantages__title=title
                                 p.advantages__text=text
                         +advantages('./img/icons/eco.png','Экологичность',' Дома из СИП-панелей отвечают всем требованиям экологической безопасности. ОСП и пенополистирол — экологически чистые материалы. Дома из СИП-панелей гипоалергенны, в них могут проживать люди, страдающие от аллергии или астмы.','экологичность')
-                        +advantages('./img/icons/speed-build.png','Скорость возведения','Комплект дома предварительно изготавливается в цехе  и на место строительство привозится в виде готовых монтаж деталей: стен, перекрытий и кровли.Поэтому, мы можем обеспечить достаточно высокий темп строительства.','обустройство помещений')
+                        +advantages('./img/icons/house-save.png','Скорость возведения','Комплект дома предварительно изготавливается в цехе  и на место строительство привозится в виде готовых монтаж деталей: стен, перекрытий и кровли.Поэтому, мы можем обеспечить достаточно высокий темп строительства.','обустройство помещений')
                         +advantages('./img/icons/termo.png','Термоизоляция','Дома из СИП очень энергоэффективны, что позволяет их хозяевам платить за отопление меньше, чем хозяевам обычных домов.Экономия может составлять до 45%.','термоизоляция')
                         +advantages('./img/icons/column.png','Легкость отделки','СИП-панели представляют собой идеально ровные гладкие плоскости, в большинстве случаев требующие лишь финишной отделки без какой-либо предварительной подготовки')
         
@@ -146,8 +146,9 @@ body
                     a.button.button--small(href="#") Заказать
                 .excellence__right
                     .excellence__bg
+                        img.excellence__pic(src="./img/ex")
                     .excellence__description
-                        .excellence__img: img(src="./img/" alt="сип-панель")
+                        .excellence__img: img(src="./img/sip.png" alt="сип-панель")
                         .excellence__description-content
                             h3.advantages__title Технология
                             p.advantages__text Структурно-Изолированная Панель (Structural Insulated Panel) — состоят из двух плит ОСП-3 (OSB-3) и теплоизолирующего слоя пенополистирола между ними.
