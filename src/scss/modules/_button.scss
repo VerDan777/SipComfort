@@ -12,6 +12,7 @@
     @include font($white,$mainFont, 1.2rem, 500);
     border: 1px solid $white;
     text-transform: uppercase;
+    cursor: pointer;
 
     @include atDesktop {
         // box model
@@ -59,5 +60,11 @@
     &--section {
         border: 2px solid #c5c2c2;
         color: #4b4e53;
+    }
+
+    &--project {
+        @include centerer;
+        opacity: 0;
+        transition:  opacity 0.3s;
     }
 }

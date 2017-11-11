@@ -48,6 +48,9 @@
             color: #4b4e53;
             font-weight: bold;
         }
+        @include atSmall {
+            font-size: 2rem;
+        }
     }
     &__text {
         // typography

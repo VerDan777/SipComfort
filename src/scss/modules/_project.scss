@@ -30,12 +30,33 @@
         justify-content: space-between;
         // height: 200px;
         width: 100%;
+        position: relative;
+
+        &:hover {
+            transiton: 0.5s;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background-color: rgba(#000, 0.5);
+            
+        }
+    }
+
     }
 
     &--all {
         width: 934px;
         margin: auto;
         padding: 0 20px;
+
+        &::after {
+            display: none;
+        }
 
         @include atTabletsPortrait {
             padding: 0;
@@ -64,6 +85,16 @@
         // width: 934px;
         height: 500px;
         // order: 2;
+    }
+
+    &__description {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+
     }
 
     &__left {
@@ -107,4 +138,9 @@
             font-size: 2.25rem;
         }
     }
+}
+
+.project__item:hover .button--project {
+    opacity: 1;
+    transition: opacity .3s;
 }

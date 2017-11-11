@@ -25,12 +25,21 @@ watch('./src/scss/**/*.scss', ()=> {
     gulp.start('CssInject');
 })
 
+// Scritps
+watch('./src/js/**/*.js', ()=> {
+    gulp.start('jsChanged');
+})
+
 
 gulp.task('pugChanged', ['PugRender'], ()=> {
     BrowserSync.reload();
 });
+
 gulp.task('CssInject', ['styles'], ()=> {
     gulp.src('./src/dist/styles.css')
     .pipe(BrowserSync.stream());
-
 });
+
+gulp.task('jsChanged', ['scripts'], ()=> {
+    BrowserSync.reload();
+})

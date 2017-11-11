@@ -8,20 +8,23 @@ head
     link(href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet")
     title SipComfort
 body
-    header.site-header
+    #overlay
+        //- .logo--overlay: img(src="./img/logo.png")
+        .spinner
+    header.site-header#home
         nav.main-nav: .container
             .main-nav__container
                 .logo--header: img(src="./img/logo.png", alt="логотип сипкомфорт")
                 .menu-icon: .menu-icon__middle
                 nav.main-menu.main-menu--header
                     ul.main-menu__list
-                        -var menu = ['Главная','Проекты', 'Цены', 'Технологии', 'Ответ', 'О компании']
-                        -var menuLinks = ['#home','#projects','#price','#techology','#feedback','#about']
+                        -var menu = ['Главная','Проекты', 'Цены', 'Технологии', 'Ответ', 'О компании','Контакты']
+                        -var menuLinks = ['#home','#projects','#price','#techology','#feedback','#about', '#contacts']
                             each item,key in menu
                                 li.main-menu__item: a.main-menu__link(href=menuLinks[key])=menu[key]
         section.hero: .container
             .hero__container
-                .hero__form
+                //- .hero__form
                     //- .hero__top
                     //-     .hero__build
                     //-         h3.hero__build-title Построим дом своей мечты вместе с СИПкомфорт
@@ -41,10 +44,10 @@ body
                     //-         a.button(href="#") Написать
 
                 .hero__motto
-                    .hero__main-title Комфортные&nbsp;дома из сип-&nbsp;панелей от&nbsp;Производителя
+                    .hero__main-title Комфортные дома из сип-&nbsp;панелей от Производителя
                     .hero__main-text Строительство домов и разработка проектной документации «ПОД КЛЮЧ» постройте дом своей мечты
 
-        section.features: .container
+        section.features#about: .container
             .features__container
                 .section__block
                     h4.section__title Комфортные <br>дома из<br><b>Сип-&nbsp;панелей</b>
@@ -84,7 +87,7 @@ body
                             h3.features__title Качество от производителей
                             p.features__text Гарантия качества материалов и работ по сборке и монтажу обьектов
 
-        section.project
+        section.project#projects
             .project__container
                 article.project__item.project--all
                     .section__block.section__block--center
@@ -92,26 +95,32 @@ body
                         p.section__text Комфорт и качество наших домов гарантирован
                         a.button.button--section(href="#") Все проекты
                 article.project__item.project--first
-                    .project__left
-                        .project__name Проекты<br> Дачник 0029
-                    .project__right
-                        .project__square 126 m<sup>2</sup>
-                        .project__price 710&nbsp;000&nbsp;РУБ
+                    .project__description
+                        .project__left
+                            .project__name Проекты<br> Дачник 0029
+                        .project__right
+                            .project__square 126 m<sup>2</sup>
+                            .project__price 710&nbsp;000&nbsp;РУБ
+                    a.button.button--project(href="") Подробнее
 
                 article.project__item.project--second
-                    .project__left
-                        .project__name Проекты<br> Дачник 0029
-                    .project__right
-                        .project__square 126 m<sup>2</sup>
-                        .project__price 710 000 РУБ
-
+                    .project__description
+                        .project__left
+                            .project__name Проекты<br> Дачник 0029
+                        .project__right
+                            .project__square 126 m<sup>2</sup>
+                            .project__price 710&nbsp;000&nbsp;РУБ
+                    a.button.button--project(href="") Подробнее
+                    
                 article.project__item.project--third
-                    .project__left
-                        .project__name Проекты<br> Дачник 0029
-                    .project__right
-                        .project__square 126 m<sup>2</sup>
-                        .project__price 710 000 РУБ
-        
+                    .project__description
+                        .project__left
+                            .project__name Проекты<br> Дачник 0029
+                        .project__right
+                            .project__square 126 m<sup>2</sup>
+                            .project__price 710&nbsp;000&nbsp;РУБ
+                    a.button.button--project(href="#") Подробнее
+                    
         section.advantages
             .advantages__bg
                 img(src="./img/kitchen.png")
@@ -136,11 +145,11 @@ body
                 h2.promo__title Позволь себе мечту - постройте свой свой собственный дом
                 a.button(href="#") Написать нам
         
-        section.excellence: .container
+        section.excellence#techology: .container
             .excellence__container
                 .excellence__left
                     .section__block.section__block--excellence
-                        h4.section__title Преимущества домов из <b>Сип-&nbsp;панелей</b>
+                        h4.section__title Преимущества домов из <b>Сип-панелей</b>
                         p.section__text Мы предлагаем нашим клиентам качественную и быструю постройку комфортабельных домов из СИП-панелей по вашим и нашим проектам. У нас есть большой выбор уже существующих проектов домов, так же мы измененим понравившийся вам проект по вашему желанию совершенно бесплатно. А если необходимо то разработаем новый проект с нуля или по вашим зарисовкам.
                         p.section__text У нас есть собственное производство СИП-панелей, поэтому панели всегда есть в наличии и под заказ в любом количестве.
                         p.section__text Наша стройгруппа способна решать вопросы не только монтажа в указанной комплектации «серого ключа», но и вести генподряд под «чистый ключ», включая изготовление ограждений участков, септиков, дренажных работ, планировки участков. А при необходимости наши партнеры изготовят вам лестницы и мебель под ваш интерер.
@@ -178,6 +187,19 @@ body
                 .news__right
                     .news_bg
                         img.news__pic(src="./img/news-bg.png")
+        section.contacts#contacts
+            .contacts__container
+                .section__block.section__block--contacts
+                    h4.section__title Наши контакты
+                    p.hero__action Адрес:
+                    span.hero__call Московский проспект 182. офис 110
+                    p.hero__action Телефон: 
+                    span.hero__call +7 (4012) 40-01-80, +7 (952) 112-03-04
+                    p.hero__action E-mal:
+                    span.hero__call sipcomfort@gmail.com
+            .contacts__map
+                .map
+
         footer.site-footer: .container
             .site-footer__container
                 .logo--footer: img(src="./img/logo-footer.png")
@@ -200,3 +222,6 @@ body
                                         a.socials__link(href=socialsLink[key])
                                             img.socials__img(src=socials[key] alt=socialsAlt[key])
                     .site-footer__author @katz cant read 2017
+
+    script(src="menu.js")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAInlJhaeejW5su7EzLziC6gjj66jLrtd4&callback=initMap")

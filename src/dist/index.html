@@ -9,7 +9,10 @@
   <title>SipComfort</title>
 </head>
 <body>
-  <header class="site-header">
+  <div id="overlay">
+    <div class="spinner"></div>
+  </div>
+  <header class="site-header" id="home">
     <nav class="main-nav">
       <div class="container">
         <div class="main-nav__container">
@@ -25,6 +28,7 @@
               <li class="main-menu__item"><a class="main-menu__link" href="#techology">Технологии</a></li>
               <li class="main-menu__item"><a class="main-menu__link" href="#feedback">Ответ</a></li>
               <li class="main-menu__item"><a class="main-menu__link" href="#about">О компании</a></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="#contacts">Контакты</a></li>
             </ul>
           </nav>
         </div>
@@ -33,15 +37,14 @@
     <section class="hero">
       <div class="container">
         <div class="hero__container">
-          <div class="hero__form"></div>
           <div class="hero__motto">
-            <div class="hero__main-title">Комфортные&nbsp;дома из сип-&nbsp;панелей от&nbsp;Производителя</div>
+            <div class="hero__main-title">Комфортные дома из сип-&nbsp;панелей от Производителя</div>
             <div class="hero__main-text">Строительство домов и разработка проектной документации «ПОД КЛЮЧ» постройте дом своей мечты</div>
           </div>
         </div>
       </div>
     </section>
-    <section class="features">
+    <section class="features" id="about">
       <div class="container">
         <div class="features__container">
           <div class="section__block">
@@ -80,7 +83,7 @@
         </div>
       </div>
     </section>
-    <section class="project">
+    <section class="project" id="projects">
       <div class="project__container">
         <article class="project__item project--all">
           <div class="section__block section__block--center">
@@ -89,31 +92,37 @@
           </div>
         </article>
         <article class="project__item project--first">
-          <div class="project__left">
-            <div class="project__name">Проекты<br> Дачник 0029</div>
-          </div>
-          <div class="project__right">
-            <div class="project__square">126 m<sup>2</sup></div>
-            <div class="project__price">710&nbsp;000&nbsp;РУБ</div>
-          </div>
+          <div class="project__description">
+            <div class="project__left">
+              <div class="project__name">Проекты<br> Дачник 0029</div>
+            </div>
+            <div class="project__right">
+              <div class="project__square">126 m<sup>2</sup></div>
+              <div class="project__price">710&nbsp;000&nbsp;РУБ</div>
+            </div>
+          </div><a class="button button--project" href="">Подробнее</a>
         </article>
         <article class="project__item project--second">
-          <div class="project__left">
-            <div class="project__name">Проекты<br> Дачник 0029</div>
-          </div>
-          <div class="project__right">
-            <div class="project__square">126 m<sup>2</sup></div>
-            <div class="project__price">710 000 РУБ</div>
-          </div>
+          <div class="project__description">
+            <div class="project__left">
+              <div class="project__name">Проекты<br> Дачник 0029</div>
+            </div>
+            <div class="project__right">
+              <div class="project__square">126 m<sup>2</sup></div>
+              <div class="project__price">710&nbsp;000&nbsp;РУБ</div>
+            </div>
+          </div><a class="button button--project" href="">Подробнее</a>
         </article>
         <article class="project__item project--third">
-          <div class="project__left">
-            <div class="project__name">Проекты<br> Дачник 0029</div>
-          </div>
-          <div class="project__right">
-            <div class="project__square">126 m<sup>2</sup></div>
-            <div class="project__price">710 000 РУБ</div>
-          </div>
+          <div class="project__description">
+            <div class="project__left">
+              <div class="project__name">Проекты<br> Дачник 0029</div>
+            </div>
+            <div class="project__right">
+              <div class="project__square">126 m<sup>2</sup></div>
+              <div class="project__price">710&nbsp;000&nbsp;РУБ</div>
+            </div>
+          </div><a class="button button--project" href="#">Подробнее</a>
         </article>
       </div>
     </section>
@@ -153,12 +162,12 @@
         </div>
       </div>
     </section>
-    <section class="excellence">
+    <section class="excellence" id="techology">
       <div class="container">
         <div class="excellence__container">
           <div class="excellence__left">
             <div class="section__block section__block--excellence">
-              <h4 class="section__title">Преимущества домов из <b>Сип-&nbsp;панелей</b></h4>
+              <h4 class="section__title">Преимущества домов из <b>Сип-панелей</b></h4>
               <p class="section__text">Мы предлагаем нашим клиентам качественную и быструю постройку комфортабельных домов из СИП-панелей по вашим и нашим проектам. У нас есть большой выбор уже существующих проектов домов, так же мы измененим понравившийся вам проект по вашему желанию совершенно бесплатно. А если необходимо то разработаем новый проект с нуля или по вашим зарисовкам.</p>
               <p class="section__text">У нас есть собственное производство СИП-панелей, поэтому панели всегда есть в наличии и под заказ в любом количестве.</p>
               <p class="section__text">Наша стройгруппа способна решать вопросы не только монтажа в указанной комплектации «серого ключа», но и вести генподряд под «чистый ключ», включая изготовление ограждений участков, септиков, дренажных работ, планировки участков. А при необходимости наши партнеры изготовят вам лестницы и мебель под ваш интерер.</p>
@@ -211,6 +220,19 @@
         </div>
       </div>
     </section>
+    <section class="contacts" id="contacts">
+      <div class="contacts__container">
+        <div class="section__block section__block--contacts">
+          <h4 class="section__title">Наши контакты</h4>
+          <p class="hero__action">Адрес:</p><span class="hero__call">Московский проспект 182. офис 110</span>
+          <p class="hero__action">Телефон: </p><span class="hero__call">+7 (4012) 40-01-80, +7 (952) 112-03-04</span>
+          <p class="hero__action">E-mal:</p><span class="hero__call">sipcomfort@gmail.com</span>
+        </div>
+      </div>
+      <div class="contacts__map">
+        <div class="map"></div>
+      </div>
+    </section>
     <footer class="site-footer">
       <div class="container">
         <div class="site-footer__container">
@@ -243,4 +265,6 @@
       </div>
     </footer>
   </header>
+  <script src="menu.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAInlJhaeejW5su7EzLziC6gjj66jLrtd4&amp;callback=initMap"></script>
 </body>
