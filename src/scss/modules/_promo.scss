@@ -3,7 +3,10 @@
     background-image: url('./img/promo.png');
     background-size: cover;
     background-position: center center;
-    height: 160px;
+
+    @include atDesktop {
+        height: 160px;
+    }
 
     &::after {
         content: '';
@@ -16,9 +19,17 @@
     }
 
     &__container {
-        padding: 60px 0;
+        padding: 60px 20px;
         display: flex;
         justify-content: center;
+        flex-direction: column;
+        text-align: center;
+
+        @include atDesktop {
+            flex-direction: row;
+            text-align: justify;
+            padding: 60px 0;
+        }
     }
 
     &__title {
@@ -27,7 +38,12 @@
         @include font($white,$mainFont,24px,300);
         text-transform: uppercase;
         display: inline-block;
-        padding-right: 100px;
+        // padding-right: 100px;
+
+        @include atDesktop {
+            // box model
+            padding-right: 100px;
+        }
 
     }
 }

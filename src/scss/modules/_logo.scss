@@ -14,9 +14,17 @@
 
     &--footer {
         // box model
-        padding-right: 115px;
-        width: 375px;
+        width: 250px;
         height: 200px;
+
+        img {
+            width: 100%;
+        }
+        @include atTabletsPortrait {
+            // box model
+            width: 375px;
+            padding-right: 115px;
+        }
     }
     
 }

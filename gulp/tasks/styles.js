@@ -10,12 +10,12 @@ const rename = require('gulp-rename');
 gulp.task('styles', ()=> {
     return gulp.src('./src/scss/**/*.scss')
     .pipe(sass({importer: SassModuleImporter()}))
-    .on('error', notify.onError(function(error) {
-        return {
-            title: 'Styles',
-            messsage: error.messsage
-        }
-    }))
+    .on("error", notify.onError(function(error) {
+            return {
+                title: "Styles",
+                message: error.message
+            };
+        }))
     .pipe(autoprefixer({
         browsers: ['last 2 versions'],
         cascade:false

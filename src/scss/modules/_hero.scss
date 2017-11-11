@@ -1,6 +1,6 @@
 .hero {
     // box model
-    min-height: 750px;
+   height: 90vh;
     width: 100%;
 
     // visual
@@ -9,6 +9,12 @@
     background-size: cover;
     box-shadow: 0px 70px 67px -20px rgba(0,0,0,0.24);
     position: relative;
+    background-position: center center;
+
+    @include atDesktop {
+        // box model
+        min-height: 750px;
+    }
 
    &::after {
         content: '';
@@ -25,6 +31,12 @@
     &__container {
         // box model
         display: flex;
+        flex-direction: column;
+        position: relative;
+
+        @include atDesktop {
+            flex-direction: row;
+        }
 
     }
 
@@ -32,16 +44,25 @@
         // positioning
         position: relative;
         z-index: 1;
+
         // box model
-        width: 700px;
-        margin: 50px 0;
-        padding: 70px 50px;
+        margin: 20px 30px;
+        padding: 10px 10px;
 
         // typography
         background-color: rgba($form ,0.6);
 
         // visual
         border: 3px solid $accent;
+        // display: flex;
+        // flex-direction: column;
+
+        @include atDesktop {
+            // box model
+            width: 700px;
+            padding: 70px 50px;
+            margin: 50px 0;
+        }
     }
 
     &__motto {
@@ -51,23 +72,34 @@
 
         // box model
         display: inline-block;
-        margin: 150px;
-        height: 375px;
-        margin-left: 10%;
+        // margin: 150px;
+        // height: 375px;
+        // margin-left: 10%;
         padding-left: 50px;
         border-left: 2px solid $white;
+        // display: none;
+        order: 1;
     }
 
     &__top {
         // box model
         display: flex;
         align-items: flex-start;
+        flex-direction: column;
 
+        @include atDesktop {
+            // box model
+            flex-direction: row;
+        }
     }
 
     &__info {
         // box model
-        text-align: right;
+        text-align: left;
+        @include atDesktop {
+            // box model
+            text-align: right;
+        }
     }
 
     &__build-title {
@@ -76,7 +108,7 @@
         margin: 0;
 
         // typography
-        @include font($white,$mainFont,1.5rem,500);
+        @include font($white,$mainFont,1rem,500);
     }
 
     &__text {
@@ -84,27 +116,36 @@
         @include font($text,$mainFont,1rem,500);
         line-height: 1.5;
         margin: 0;
+        padding-bottom: 20px;
+        @include atDesktop {
         padding-bottom: 100px;
 
+        }
+
         &--nopd {
+            // box model
             padding-bottom: 20px;
         }
     }
 
     &__action {
         // typography
-        @include font(#c2ecae,$mainFontSemiBold,1.5rem, 500);
+        @include font(#c2ecae,$mainFontSemiBold,1.1rem, 500);
         text-transform: uppercase;
         letter-spacing: 2px;
         margin: 0;
+
+        @include atDesktop {
+            font-size: 1.5rem;
+        }
     }
 
     &__call {
         // box model
         display: block;
-        padding-bottom: 30px;
+        padding-bottom: 10px;
         
-        @include font($white, $mainFont, 1.875rem, bold);
+        @include font($white, $mainFont, 1rem, bold);
     }
 
     &__main-title {
@@ -112,6 +153,7 @@
         @include font($white,$mainFontSemiBold,3.75rem, 100);
         text-transform: uppercase;
         padding-bottom: 30px;
+        display: none;
     }
     &__main-text {
         
@@ -119,5 +161,6 @@
         @include font($white, $mainFont, 1.5rem, 100);
         text-transform: uppercase;
         line-height: 1.5;
+        display: none;
     }
 }

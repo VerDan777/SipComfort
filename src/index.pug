@@ -12,7 +12,8 @@ body
         nav.main-nav: .container
             .main-nav__container
                 .logo--header: img(src="./img/logo.png", alt="логотип сипкомфорт")
-                nav.main-menu
+                .menu-icon: .menu-icon__middle
+                nav.main-menu.main-menu--header
                     ul.main-menu__list
                         -var menu = ['Главная','Проекты', 'Цены', 'Технологии', 'Ответ', 'О компании']
                         -var menuLinks = ['#home','#projects','#price','#techology','#feedback','#about']
@@ -21,23 +22,23 @@ body
         section.hero: .container
             .hero__container
                 .hero__form
-                    .hero__top
-                        .hero__build
-                            h3.hero__build-title Построим дом своей мечты вместе с СИПкомфорт
-                            p.hero__text Мы предлагаем нашим клиентам качественную и быструю постройку комфортабельных домов из СИП-панелей по вашим  и нашим проектам.
-                        .hero__info
-                            h2.hero__action Звоните сейчас!
-                            p.hero__text.hero__text--nopd Мы готовы ответить<br> на все ваши вопросы
-                            span.hero__call +7 (4012) 40-01-80
-                            span.hero__call +7 (952) 112-03-04
-                            h2.hero__action или пишите
-                            span.hero__call sipkomfort@gmail.com
-                    .hero__bottom
-                        h2.hero__action Наш адрес
-                        span.hero__call Московский проспект 182. офис 110
-                        .button__container
-                            a.button(href="#") Позвонить
-                            a.button(href="#") Написать
+                    //- .hero__top
+                    //-     .hero__build
+                    //-         h3.hero__build-title Построим дом своей мечты вместе с СИПкомфорт
+                    //-         p.hero__text Мы предлагаем нашим клиентам качественную и быструю постройку комфортабельных домов из СИП-панелей по вашим  и нашим проектам.
+                    //-     .hero__info
+                    //-         h2.hero__action Звоните сейчас!
+                    //-         p.hero__text.hero__text--nopd Мы готовы ответить<br> на все ваши вопросы
+                    //-         span.hero__call +7 (4012) 40-01-80
+                    //-         span.hero__call +7 (952) 112-03-04
+                    //-         h2.hero__action или пишите
+                    //-         span.hero__call sipkomfort@gmail.com
+                    //- .hero__bottom
+                    //-     h2.hero_65a447_action Наш адрес
+                    //-     span.hero__call Московский проспект 182. офис 110
+                    //-     .button__container
+                    //-         a.button(href="#") Позвонить
+                    //-         a.button(href="#") Написать
 
                 .hero__motto
                     .hero__main-title Комфортные&nbsp;дома из сип-&nbsp;панелей от&nbsp;Производителя
@@ -52,32 +53,34 @@ body
                 .features__block
                     ul.features__list
                         li.features__item
-                            img.features__pic(src="./img/icons/house.png" alt="строительство под ключ")
+                            .features__img
+                                img.features__pic(src="./img/icons/house.svg" alt="строительство под ключ")
                             h3.features__title Строительство "под ключ"
-                            p.features__text Строим каркасные дома «под ключ», разработка <br>проектной документации
+                            p.features__text Строим каркасные дома «под ключ», разработка <br>проектной документации.
 
                         li.features__item
-                            img.features__pic(src="./img/icons/price.png" alt="лучшие цены'")
+                            img.features__pic(src="./img/icons/currency.svg" alt="лучшие цены'")
                             h3.features__title Лучшие цены
                             p.features__text Гарантия лучших цен, отличное соотношения цены и качества
                             
                         li.features__item
-                            img.features__pic(src="./img/icons/factory.png" alt="строительство под ключ")
+                            img.features__pic(src="./img/icons/factory.svg" alt="строительство под ключ")
                             h3.features__title  Собственное производство
                             p.features__text Собственное производство СИП-панелей, гарантия<br>качетства
 
                         li.features__item
-                            img.features__pic(src="./img/icons/paint-roller.png" alt="строительство под ключ")
+
+                            img.features__pic(src="./img/icons/paint-roller.svg" alt="строительство под ключ")
                             h3.features__title Обустройство
                             p.features__text Оказываем помощь и услуги в обустройстве домов, отделке
 
                         li.features__item
-                            img.features__pic(src="./img/icons/certificate.png" alt="строительство под ключ")
+                            img.features__pic(src="./img/icons/certificate.svg" alt="строительство под ключ")
                             h3.features__title Экологичные материалы
                             p.features__text Использвоание только экологичных материалов в<br> производстве работ
 
                         li.features__item
-                            img.features__pic(src="./img/icons/house1.png" alt="строительство под ключ")
+                            img.features__pic(src="./img/icons/house(1).svg" alt="строительство под ключ")
                             h3.features__title Качество от производителей
                             p.features__text Гарантия качества материалов и работ по сборке и монтажу обьектов
 
@@ -93,7 +96,7 @@ body
                         .project__name Проекты<br> Дачник 0029
                     .project__right
                         .project__square 126 m<sup>2</sup>
-                        .project__price 710 000 РУБ
+                        .project__price 710&nbsp;000&nbsp;РУБ
 
                 article.project__item.project--second
                     .project__left
@@ -114,7 +117,7 @@ body
                 img(src="./img/kitchen.png")
             .advantages__container
                 .section__block.section__block--advantages
-                    h4.section__title Преимущества домов из<br><b>Сип-панелей</b>
+                    h4.section__title Преимущества домов из<br><b>Сип-&nbsp;панелей</b>
                     p.section__text Стротельство домов из СИП-панелей нетолько достаточно экономично, но также имеет ряд преимущества, по сравнению с традиционными технологиями:
                 .advantages__block
                     ul.advantages__list
@@ -123,10 +126,10 @@ body
                                 img.advantages__pic(src=imgURL alt=alt)
                                 h3.advantages__title=title
                                 p.advantages__text=text
-                        +advantages('./img/icons/eco.png','Экологичность',' Дома из СИП-панелей отвечают всем требованиям экологической безопасности. ОСП и пенополистирол — экологически чистые материалы. Дома из СИП-панелей гипоалергенны, в них могут проживать люди, страдающие от аллергии или астмы.','экологичность')
-                        +advantages('./img/icons/house-save.png','Скорость возведения','Комплект дома предварительно изготавливается в цехе  и на место строительство привозится в виде готовых монтаж деталей: стен, перекрытий и кровли.Поэтому, мы можем обеспечить достаточно высокий темп строительства.','обустройство помещений')
-                        +advantages('./img/icons/termo.png','Термоизоляция','Дома из СИП очень энергоэффективны, что позволяет их хозяевам платить за отопление меньше, чем хозяевам обычных домов.Экономия может составлять до 45%.','термоизоляция')
-                        +advantages('./img/icons/column.png','Легкость отделки','СИП-панели представляют собой идеально ровные гладкие плоскости, в большинстве случаев требующие лишь финишной отделки без какой-либо предварительной подготовки')
+                        +advantages('./img/icons/eco.svg','Экологичность',' Дома из СИП-панелей отвечают всем требованиям экологической безопасности. ОСП и пенополистирол — экологически чистые материалы. Дома из СИП-панелей гипоалергенны, в них могут проживать люди, страдающие от аллергии или астмы.','экологичность')
+                        +advantages('./img/icons/house-idea.svg','Скорость возведения','Комплект дома предварительно изготавливается в цехе  и на место строительство привозится в виде готовых монтаж деталей: стен, перекрытий и кровли.Поэтому, мы можем обеспечить достаточно высокий темп строительства.','обустройство помещений')
+                        +advantages('./img/icons/termo.svg','Термоизоляция','Дома из СИП очень энергоэффективны, что позволяет их хозяевам платить за отопление меньше, чем хозяевам обычных домов.Экономия может составлять до 45%.','термоизоляция')
+                        +advantages('./img/icons/column.svg','Легкость отделки','СИП-панели представляют собой идеально ровные гладкие плоскости, в большинстве случаев требующие лишь финишной отделки без какой-либо предварительной подготовки')
         
         section.promo: .container
             .promo__container
@@ -137,13 +140,12 @@ body
             .excellence__container
                 .excellence__left
                     .section__block.section__block--excellence
-                        h4.section__title Преимущества домов из <span>Сип-панелей</span>
+                        h4.section__title Преимущества домов из <b>Сип-&nbsp;панелей</b>
                         p.section__text Мы предлагаем нашим клиентам качественную и быструю постройку комфортабельных домов из СИП-панелей по вашим и нашим проектам. У нас есть большой выбор уже существующих проектов домов, так же мы измененим понравившийся вам проект по вашему желанию совершенно бесплатно. А если необходимо то разработаем новый проект с нуля или по вашим зарисовкам.
                         p.section__text У нас есть собственное производство СИП-панелей, поэтому панели всегда есть в наличии и под заказ в любом количестве.
                         p.section__text Наша стройгруппа способна решать вопросы не только монтажа в указанной комплектации «серого ключа», но и вести генподряд под «чистый ключ», включая изготовление ограждений участков, септиков, дренажных работ, планировки участков. А при необходимости наши партнеры изготовят вам лестницы и мебель под ваш интерер.
-
-
-                    a.button.button--small(href="#") Заказать
+                        .button__container
+                            a.button.button--small(href="#") Заказать
                 .excellence__right
                     .excellence__bg
                         img.excellence__pic(src="./img/ex")
@@ -190,7 +192,7 @@ body
                 .site-footer__block
                     .socials
                         ul.socials__list
-                            - var socials = ['./img/icons/fb.png','./img/icons/google.png','./img/icons/twitter.png','./img/icons/in.png']
+                            - var socials = ['./img/icons/fb.svg','./img/icons/g+.svg','./img/icons/tw.svg','./img/icons/in.svg']
                             - var socialsLink = ['http://facebook.com','http://google.com','http://twitter.com','http://instagramm.com']
                             - var socialsAlt = ['facebook','google','twitter','instagramm']
                                 each item,key in socials

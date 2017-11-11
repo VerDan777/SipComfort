@@ -1,10 +1,16 @@
 .features {
     // positionining
     position: relative;
+
     // box model
     min-height: 560px;
     margin: 100px 0;
     margin-bottom: 0;
+    padding: 0 20px;
+    
+    @include atDesktop {
+        padding: 0;
+    }
 
     &::after {
         content: url('./img/sip.png');
@@ -12,51 +18,93 @@
         bottom: -150px;
         left: -630px;
         z-index: 1;
+        display: none;
+        @include atDesktop {
+            display: block;
+        }
     }
 
     &__container {
         // box model
         display: flex;
+        flex-direction: column;
+
+        @include atDesktop {
+            flex-direction: row;
+        }
     }
 
     &__block {
-        padding-left: 400px;
+        
+
+        @include atDesktop {
+            padding-left: 400px;
+        }
     }
     &__list {
         // box model
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        // flex-direction: column;
         // margin: 0;
         padding: 0;
         list-style-type: none;
+        
+        @include atDesktop {
+            flex-direction: row;
+        }
     }
     &__item {
         // positioning
         position: relative;
-        display: inline-block;
-        padding-bottom: 60px;
+        // display: inline-block;
+        padding-bottom: 150px;
+        // display: flex;
+        flex-direction: column;
+        justify-content: center;
         // margin-right: 50px;
     }
 
     &__title {
-        @include font(#65a447,$mainFont, 1rem, 300);
+        @include font(#65a447,$mainFont, 1.125rem, 300);
         text-transform: uppercase;
         letter-spacing: 2px;
-        margin: 0;
-        padding-top: 5px; 
-        padding-left: 50px;
-        display: inline-block;
-        vertical-align: middle; 
-    }
-    &__pic {
-        // positioning
-        position: absolute;
-        top: 0;
-        left: 0;
+        padding: 5px 0; 
+        display: block;
+        vertical-align: middle;
+        text-align: center;
+        
+        @include atDesktop {
+            text-align: justify;
+            padding-left: 50px;
+        }
     }
 
     &__text {
-        @include font(#7e8082,$mainFont, 0.875rem, 300);
+        @include font(#7e8082,$mainFont, 0.9rem, 300);
+        text-align: center;
+
+        @include atDesktop {
+            font-size: 0.875rem;
+        }
     }
+
+    &__img {
+        // width: 100px;
+        display: block;
+        margin: 0 auto;
+    }
+    &__pic {
+        // positioning
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        display: block;
+        margin: 0 auto;
+        width: 25%;
+        // height: 100%;
+    }
+
+    
 }

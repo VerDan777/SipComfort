@@ -5,7 +5,11 @@
     &__container {
         // box model
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+
+        @include atDesktop {
+            justify-content: space-between;
+        }
     }
 }

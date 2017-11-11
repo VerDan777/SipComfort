@@ -2,20 +2,35 @@
 
     &__block {
         border-left: 2px solid $accent;
-        padding-left: 30px;
-        height: 250px;
+        padding-left: 20px;
+        margin-bottom: 100px;
+        
+        @include atDesktop {
+            padding-left: 30px;
+            height: 250px;
+        }
 
         &--center {
-
+            margin-top: 20px;
         }
         &--advantages {
-            margin-left: 45px;
-            width: 520px;
-            margin-bottom: 30px;
+            // width: 520px;
+            margin-bottom: 100px;
+
+            @include atDesktop {
+                margin-left: 45px;
+                width: 520px;
+                margin-bottom: 30px;
+            }
         }
         &--excellence {
-            width: 570px;
             height: auto;
+            padding-left: 20px;
+            margin-bottom: 30px; 
+
+            @include atDesktop {
+                width: 570px;
+            }
         }
         &--news {
             height: 150px;
@@ -26,6 +41,7 @@
         @include font(#4b4e53,$mainFont,2.25rem, 100);
         text-transform: uppercase;
         margin: 0;
+        padding-top: 20px;
         padding-bottom: 40px;
 
         b {
