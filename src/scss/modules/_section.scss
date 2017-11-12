@@ -1,78 +1,92 @@
 .section {
 
     &__block {
-        border-left: 2px solid $accent;
-        padding-left: 20px;
+        // box model
         margin-bottom: 100px;
+        padding-left: 20px;
+
+        // visual
+        border-left: 2px solid $accent;
         
         @include atDesktop {
-            padding-left: 30px;
+            // box model
             height: 250px;
+            padding-left: 30px;
         }
 
         &--center {
+            // box model
             margin-top: 20px;
         }
         &--advantages {
-            // width: 520px;
+            // box model
             margin-bottom: 100px;
 
             @include atDesktop {
-                margin-left: 45px;
+                // box model
                 width: 520px;
                 margin-bottom: 15px;
+                margin-left: 45px;
             }
         }
         &--excellence {
+            // box model
             height: auto;
-            padding-left: 20px;
             margin-bottom: 30px; 
+            padding-left: 20px;
 
             @include atDesktop {
+                // box model
                 width: 570px;
                 height: auto;
             }
         }
         &--news {
-            // height: 150px;
 
             @include atDesktop {
-                 margin-bottom: 0;
+                // box model
                  height: auto;
+                 margin-bottom: 0;
 
             }
         }
 
         &--contacts {
             @include atDesktop {
+                // box model
                 height: auto;
                 margin-top: 50px;
-
             }
         }
     }
     &__title {
-        // typography
-        @include font(#4b4e53,$mainFont,2.25rem, 100);
-        text-transform: uppercase;
+        // box model
         margin: 0;
         padding-top: 20px;
         padding-bottom: 40px;
 
+        // typography
+        @include font(#4b4e53,$mainFont,2.25rem, 100);
+        text-transform: uppercase;
+
         b {
+            // typography
             color: #4b4e53;
             font-weight: bold;
         }
         @include atSmall {
+            // typography
             font-size: 2rem;
         }
     }
     &__text {
-        // typography
-        @include font(#4b4e53, $mainFont, 1rem, 100);
-        line-height: 1.5;
+        // box model
         display: block;
         margin: 0;
         margin-bottom: 20px;
+        
+        // typography
+        @include font(#4b4e53, $mainFont, 1rem, 100);
+        line-height: 1.5;
     }
 }

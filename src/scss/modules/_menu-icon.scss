@@ -10,18 +10,13 @@
     width: 40px;
 
     // visual
-    // background-color: rgba(#65a447, 1);
     border-radius: 50%;
     border: 1px solid transparent;
 
     @include atTabletsPortrait {
         // positioning
-        // right: 15px;
         top: 35px;
 
-        // visual
-        // background-color: $white;
-        // box-shadow: 0 0 0 2px rgba($accent, 1);
     }
      @include atTabletsLandscape {
         // box model
@@ -99,9 +94,9 @@
 &--close-x {
         // visual
         background-color: transparent;
-        // border: 1px solid rgba($white, 0.2);
 
         @include atTabletsLandscape {
+            
             // visual
             background-color: $white;
         }

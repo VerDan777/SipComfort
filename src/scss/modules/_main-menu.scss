@@ -1,38 +1,45 @@
 .main-menu {
-    // box model
-    // display: none;
-
+    // positioning
     position: fixed;
     left: -900px;
     bottom: 0;
     top: 0;
-    visibility: hidden;
+    z-index: 4;
+
+    // box model
     width: 100%;
     padding: 100px 0;
-    z-index: 4;
+
+    // visual
+    visibility: hidden;
     background-color: rgba($white, 1);
     transition: 0.35s ease-in all;
 
     @include atTabletsPortrait {
 
-        // left: -900px;
     }
 
     @include atTabletsLandscape {
+        // positioning
+        position: static;
+        z-index: 0;
 
-       visibility: visible;
-       z-index: 0;
-       background: none;
-       position: static;
-       width: auto;
-       padding: 0;
-       transition: none;
+        // box model
+        width: auto;
+        padding: 0;
+
+        // visual
+        background: none;
+        visibility: visible;
+        transition: none;
+        
     }
 
-
     &--shown {
-        left: 0;
-        // opacity: 0.99;
+        // positioning
+            left: 0;
+
+        // visual
         visibility: visible;
     }
 
@@ -70,6 +77,7 @@
             @include atDesktop {
                 flex-direction: row;
                 justify-content: center;
+                
             }
         }
     }
@@ -79,62 +87,73 @@
         display: inline-block;
         vertical-align: top;
         padding-bottom: 25px;
-        // display: flex;
-        // flex-direction
 
         @include atTabletsLandscape {
             // box model
             padding-right: 15px;
             padding-bottom: 0px;
         }
+
         @include atDesktop {
+            // box model
             padding-right: 45px;
         }
 
         &--footer {
 
             @include atTabletsLandscape {
+                // box model
                 padding-bottom: 25px;
             }
 
             @include atDesktop {
+                // box model
                 padding-right: 45px;
             }
         }
     }
 
     &__link {
+        // positioning
+        position: relative;
+
         // typography
         @include font(#4b4e53,$mainFontThin,1rem, 300);
         text-transform: uppercase;
         text-decoration: none;
-        position: relative;
 
         &::before {
-            content: '';
+            // positioning
             position: absolute;
-            width: 100%;
             height: 2px;
             bottom: -10px;
             left: 0;
-            background-color: #4b4e53;
+
+            // box model
+            content: '';
+            width: 100%;
+
+            // visual
             visibility: hidden;
+            background-color: #4b4e53;
             transform: scaleX(0);
             transition: 0.3s ease-in-out all 0s;
         }
 
         &:hover,&:active {
+            // typography
             color: #65a447;
 
             &::before {
+                // visual
                 visibility: visible;
                 transform: scaleX(1);
             }
         }
 
         &--footer {
+            // typography
             @include font(#000000,$mainFontSemiBold,0.875rem, bold);
-           
         }
     }
 }

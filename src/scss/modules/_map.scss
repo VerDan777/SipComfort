@@ -1,9 +1,12 @@
 .map {
+    // box model
     height: 500px;
     
     @include atTabletsLandscape {
+        // box model
         width: 100%;
+
+        // visual
         box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.75);
     }
-    
 }

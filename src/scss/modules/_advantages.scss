@@ -1,91 +1,116 @@
 .advantages {
-    background-color: #fafcf9;
-    padding: 100px 20px;
-    display: flex;
+    // positioning
     position: relative;
 
+    // box model
+    display: flex;
+    padding: 100px 20px;
+
+    // visual
+    background-color: #fafcf9;
+
     @include atDesktop {
+        // box model
         padding: 100px 0;
     }
 
     &::after {
-        // content: url('./img/sip2.png');
+        content: url('./img/sip2.png');
+
+        // positioning
         position: absolute;
         right: -250px;
+
+        // box model
         display: none;
+
         @include atDesktop {
+            // box model
             display: block;
         }
-
     }
+
     &__bg {
         // box model
         display: none;
 
         @include atDesktop {
+            // box model
             display: block;
-
         }
+
         img {
-            box-shadow: 0px 0px 32px 1px rgba(0,0,0,0.75);
+            // box model
             width: 100%;
+
+            // visual
+            box-shadow: 0px 0px 32px 1px rgba(0,0,0,0.75);
         }
     }
 
     &__title {
+        // box model
+        display: block;
+        padding: 5px 0;
+        text-align: center;
+
         // typography
         @include font(#6ea447, $mainFont,1.125rem, 300);
         text-transform: uppercase;
         letter-spacing: 2px;
-        padding: 5px 0;
-        display: block;
-        text-align: center;
 
         @include atDesktop {
+            // box model
             text-align: left;
         }
     }
 
     &__text {
-        @include font(#7e8082,$mainFont, 0.875rem, 300);
+        @include font(#000000,$mainFont, 1rem, 300);
         text-align: left;
-        line-height: 1.5;
+        line-height: 1.8;
     }
 
     &__block {
-        // padding-left: 50px;
 
         @include atDesktop {
+            // box model
             padding: 50px;
             padding-top: 25px;
         }
     }
 
     &__container {
-        // margin-left: 40px;
 
         @include atDesktop {
+            // box model
             margin-left: 40px;
         }
     }
 
     &__list {
+        // box model
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
         padding-left: 0;
         margin: 0;
-        list-style-type: none;
-        flex-direction: column;
         justify-content: space-between;
         align-items: center;
 
+        // visual
+        list-style-type: none;
+
         @include atTabletsLandscape {
+            // box model
             flex-direction: row;
         }
     }
 
     &__item {
+        // positioning
         position: relative;
+        // box model
         display: inline-block;
         text-align: center;
         padding-bottom: 150px;
@@ -93,7 +118,6 @@
         @include atTabletsLandscape{
             // box model
             width: 350px;
-            // margin-right: 60px;
         }
 
         @include atDesktop {
@@ -103,22 +127,24 @@
         }
 
         @include atDesktopLarge {
+            // box model
             width: 350px;
         }
     }
 
     &__pic {
-        // position: absolute;
-        // top: 15px;
-        // left: -50px;
+        // box model
         display: block;
         margin: 0 auto;
         width: 15%;
 
         @include atDesktop {
+            // positioning
             position: absolute;
-            left: -50px;
             top: 10px;
+            left: -50px;
+
+            // box model
             width: 11%;
         }
 

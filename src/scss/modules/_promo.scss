@@ -1,46 +1,59 @@
 .promo {
+    // positioning
     position: relative;
+
+    // visual
+    background-attachment: fixed;
     background-image: url('./img/promo.png');
     background-size: cover;
     background-position: center center;
-    background-attachment: fixed;
-
 
     @include atDesktop {
+        // box model
         height: 160px;
     }
 
     &::after {
         content: '';
+
+        // positioning
         position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
+
+        // visual
         background-color: rgba($form, 0.3);
     }
 
     &__container {
-        padding: 60px 20px;
+        // box model
         display: flex;
-        justify-content: center;
         flex-direction: column;
         text-align: center;
+        justify-content: center;
+        padding: 60px 20px;
 
         @include atDesktop {
+            // box model
             flex-direction: row;
-            text-align: justify;
             padding: 60px 0;
+            text-align: justify;
         }
     }
 
     &__title {
+        // positioning
         position: relative;
         z-index: 1;
+
+        // box model
+        display: inline-block;
+
+        // typography
         @include font($white,$mainFont,24px,300);
         text-transform: uppercase;
-        display: inline-block;
-        // padding-right: 100px;
 
         @include atDesktop {
             // box model

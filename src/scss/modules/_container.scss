@@ -1,8 +1,10 @@
 .container {
+    // box model
     max-width: 1170px;
     margin: 0 auto;
 
     @include atDesktopLarge {
+        // box model
         max-width: 1600px;
     }
 }

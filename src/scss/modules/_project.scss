@@ -1,155 +1,188 @@
 .project {
-
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: flex-end;
-    box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.75);
+    // positoning
     position: relative;
-    // padding: 0 20px;
+
+    // visual
+    box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.75);
 
     &:hover {
         &::after {
+            // positioning
             position: absolute;
             top: 0;
             bottom: 0;
             left: 0;
             right: 0;
+
+            // visual
             background-color: rgba($form, 0.8);
         }
     }
 
     &__container {
+        // box model
         display: flex;
         flex-wrap: wrap;
         align-items: center;
 
     }
     &__item {
+        // positioning
+        position: relative;
+
+        // box model
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
-            background-size: cover;
-            
-        // height: 200px;
         width: 100%;
-        position: relative;
+
+        // visual
+        background-size: cover;
+            
 
         @include atTabletsLandscape {
+            // box model
             width: 50%;
         }
 
         &:hover {
+            // visual
             transiton: 0.5s;
+
         &::after {
+            // positioning
             content: '';
             position: absolute;
             top: 0;
             bottom: 0;
             left: 0;
             right: 0;
+
+            // box model
             width: 100%;
+
+            // visual
             background-color: rgba(#000, 0.5);
             
         }
     }
-
     }
 
     &--all {
+        // box model
         width: 934px;
         margin: auto;
         padding: 0 20px;
 
         &::after {
+            // box model
             display: none;
         }
 
         @include atTabletsPortrait {
+            // box model
             padding: 0;
         }
 }
     &--first {
-        background-image: url('./img/project3.png');
-        background-attachment: fixed;
-        // background-position: 0% 60%;
-        background-repeat: no-repeat;
-        // width: 934px;
+        // box model
         height: 500px;
-        // order: 0;
+
+        // visual
+        background-attachment: fixed;
+        background-image: url('./img/project3.png');
+        background-repeat: no-repeat;
     }
     &--second {
+        // box model
+        height: 500px;
+
+        // visual
         background-attachment: fixed;
         background-image: url('./img/project.png');
-        // width: 375px;
-        height: 500px;
-        // background-position: 0% 20%;
         background-repeat: no-repeat;
-        // order: -1;
     }
     &--third {
+        // box model
+        height: 500px;
+
+        // visual
         background-attachment: fixed;
         background-image: url('./img/project2.png');
-        // background-position: 0% 20%;
         background-repeat: no-repeat;
-        // width: 934px;
-        height: 500px;
-        // order: 2;
     }
 
     &__description {
+        // positioning
         position: relative;
         z-index: 1;
+
+        // box model
         display: flex;
+        width: 100%;
         align-items: flex-end;
         justify-content: space-between;
-        width: 100%;
-
     }
 
     &__left {
+        // box model
         padding-left: 20px;
         padding-bottom: 17px;
+        
+        // typography
         @include font($white,$mainFontSemiBold,1rem, 600);
         text-transform: uppercase;
         
         @include atDesktop {
+            // box model
             padding-left: 40px;
             padding-bottom: 17px;
+
+            // typography
             font-size: 1.125rem;
         }
     }
 
     &__right {
+        // box model
         padding-right: 20px;
         padding-bottom: 17px;
-        @include font($white,$mainFontSemiBold,1.125rem, 300);
         text-align: right;
 
+        // typography
+        @include font($white,$mainFontSemiBold,1.125rem, 300);
+
         @include atDesktop {
+            // box model
             padding-left: 40px;
             padding-bottom: 17px;
         }
 
     }
     &__square {
+        // typography
         font-size: 1.5rem;
         font-weight: 500;
 
         @include atDesktop {
+            // typography
             font-size: 2.25rem;
         }
     }
     &__price {
+        // typography
         font-size: 1.5rem;
         font-weight: 700;
 
         @include atDesktop {
+            // typography
             font-size: 2.25rem;
         }
     }
 }
 
 .project__item:hover .button--project {
+    // visual
     opacity: 1;
     transition: opacity .3s;
 }

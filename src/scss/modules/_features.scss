@@ -9,17 +9,23 @@
     padding: 0 20px;
     
     @include atDesktop {
+        // box model
         padding: 0;
     }
 
     &::after {
         content: url('./img/sip.png');
+        // positioning
         position: absolute;
         bottom: -150px;
         left: -630px;
         z-index: 1;
+
+        // box model
         display: none;
+
         @include atDesktop {
+            // box model
             display: block;
         }
     }
@@ -30,18 +36,20 @@
         flex-direction: column;
 
         @include atDesktop {
+            // box model
             flex-direction: row;
         }
     }
 
     &__block {
-        
 
         @include atDesktop {
+            // box model
             padding-left: 10%;
         }
 
         @include atDesktopLarge {
+            // box model
             padding-left: 20%;
         }
     }
@@ -50,12 +58,13 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        // flex-direction: column;
-        // margin: 0;
         padding: 0;
+
+        // visual
         list-style-type: none;
         
         @include atTabletsLandscape {
+            // box model
             flex-direction: row;
             justify-content: space-between;
         }
@@ -63,78 +72,85 @@
     &__item {
         // positioning
         position: relative;
-        // display: inline-block;
+
+        // box model
         padding-bottom: 150px;
-        // width: 100%;
-        // display: flex;
         flex-direction: column;
         justify-content: center;
-        // margin-right: 50px;
 
         @include atTabletsLandscape {
+            // box model
             justify-content: space-between;
         }
 
         @include atDesktop {
+            // box model
             padding-bottom: 50px;
             width: 300px;
         }
 
         @include atDesktopLarge {
+            // box model
             width: auto;
         }
     }
 
     &__title {
-        @include font(#65a447,$mainFont, 1.125rem, 300);
-        text-transform: uppercase;
-        letter-spacing: 2px;
+        // box model
         padding: 5px 0; 
         display: block;
         vertical-align: middle;
         text-align: center;
+
+        // typography
+        @include font(#65a447,$mainFont, 1.125rem, 300);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        
         
         @include atDesktop {
-            text-align: left;
-            padding-left: 50px;
-            font-size: 1rem;
+            // box model
             width: 360px;
+            padding-left: 50px;
+            text-align: left;
+
+            // typography
+            font-size: 1rem;
         }
     }
 
     &__text {
+        // typography
         @include font(#7e8082,$mainFont, 0.9rem, 300);
         text-align: center;
 
         @include atDesktop {
+            // typography
             font-size: 0.875rem;
             text-align: left;
         }
     }
 
     &__img {
-        // width: 100px;
+        // box model
         display: block;
         margin: 0 auto;
     }
     &__pic {
         // positioning
-        // position: absolute;
-        // top: 0;
-        // left: 0;
+        // box model
         display: block;
         margin: 0 auto;
         width: 15%;
         
         @include atDesktop {
+            // positinoning
             position: absolute;
-            width: 7%;
             top: 10px;
             left: 0;
-            // display: none;
-        }
-        // height: 100%;
-    }
 
-    
+            // box model
+            width: 7%;
+        }
+    }
 }

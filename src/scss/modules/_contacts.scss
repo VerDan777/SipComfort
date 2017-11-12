@@ -1,35 +1,41 @@
 .contacts {
-    margin-bottom: 50px;
-    // display: flex;
-    // flex-direction: column;
+        // box model
+        margin-bottom: 50px;
 
     @include atTabletsLandscape {
+        // box model
         flex-direction: row;
     }
     
     &__container {
+        // box model
         padding: 0 20px;
 
         @include atTabletsLandscape {
+            // box model
             width: 50%;
         }
 
         @include atDesktop {
+            // box model
             padding: 0;
         }
     }
 
     &__wrapper {
+        // box model
         display: flex;
         flex-direction: column;
 
         @include atTabletsLandscape {
+            // box model
             flex-direction: row;
         }
     }
 
     &__map {
         @include atTabletsLandscape {
+            // box model
             width: 100%;
         }
     }

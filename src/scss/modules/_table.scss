@@ -1,13 +1,15 @@
 .table {
-    // padding-right: 10px;
 
     @include atDesktop {
+        // box model
         padding-right: 50px;
     }
+
     td {
-        // display: flex;
     }
+
     tbody {
+        // box model
         display: flex;
         flex-direction: column;
         
@@ -17,79 +19,106 @@
     }
 
     &__row {
+        // box model
         display: inline-block;
         padding-bottom: 50px;
         
         @include atTabletsLandscape {
+            // box model
             display: flex;
         }
     }
 
     &__date {
+        // typography
         @include font(#7e8082,$mainFont,3rem, bold);
+
+        // box model
         display: block;
         width: 100%;
         text-align: center;
-        text-transform: uppercase;
-        border: 1px solid #e5e5e5;
         display: inline-block;
 
+        // typography
+        text-transform: uppercase;
+
+        // visual
+        border: 1px solid #e5e5e5;
+
         @include atTabletsLandscape {
+            // box model
             width: 115px;
         }
 
         @include atDesktop {
-            border-right: 1px solid #e5e5e5;
-            border-left: none;
-            border-bottom: none;
+            // visual
             border-top: none;
-            // display: flex;
+            border-bottom: none;
+            border-left: none;
+            border-right: 1px solid #e5e5e5;
         }
         
 
         sub {
-            @include font(#4b4e53,$mainFont,1.125rem, bold);
+            // box model
             display: inline-block;
+
+            // typography
+            @include font(#4b4e53,$mainFont,1.125rem, bold);
         }
     }
     &__tech {
-        width: 100%;
-        // padding-left: 10px;
-        padding: 20px 0;
+        // box model
         display: block;
+        width: 100%;
+        padding: 20px 0;
         text-align: center;
-        border: 1px solid #e5e5e5;
 
+        // typography
         @include font(#4b4e53, $mainFont,1.125rem, 600);
         text-transform: uppercase;
 
+        // visual
+        border: 1px solid #e5e5e5;
+        
+
         @include atTabletsLandscape {
+            // box model
             display: inline-block;
             width: 300px;
         }
 
          @include atDesktop {
-            border: none;
+             // box model
             padding-left: 20px;
             padding-right: 20px; 
+
+            // typography
+            border: none;
         }
 
         span {
+            // typography
             font-weight: 100;
             font-size: 0.8125rem;
         }
     }
 
     &__content {
-        padding: 20px 0;
+        // box model
         display: block;
-        // text-align: center;
-        border: 1px solid #e5e5e5;
+        padding: 20px 0;
         width: 100%;
 
+        // visual
+        border: 1px solid #e5e5e5;
+
          @include atDesktop {
-            border: none;
+             // box model
             width: 75%;
+            
+             // visual
+            border: none;
         }
     }
 }

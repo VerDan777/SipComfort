@@ -1,12 +1,13 @@
 .logo {
 
     &--header {
+        // positioning
         position: relative;
+
         // box model
         max-width: 200px;
         max-height: 100px;
-        // padding-left: 35px;
-        // z-index: 5;
+
 
         img {
             // box model
@@ -15,34 +16,26 @@
         }
     }
 
-    // &--overlay {
-    //    display: block;
-    //    margin: auto;
-    //    padding-left: 55px;
-    //    padding-bottom: 250px;
-    //     width: 200px;
-    //     height: 100px;
-
-    //      img {
-    //         // box model
-    //         width: 100%;
-    //         height: 100%;
-    //     }
-    // }
-
     &--footer {
         // box model
         width: 250px;
         height: 200px;
 
         img {
+            // box model
             width: 100%;
         }
         @include atTabletsPortrait {
             // box model
             width: 375px;
-            // padding-right: 115px;
+
+            // box model
             padding-bottom: 75px;
+        }
+
+        @include atDesktop {
+            // box model
+            width: 50%;
         }
     }
     

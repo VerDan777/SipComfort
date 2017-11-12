@@ -9,11 +9,13 @@
         align-items: center;
 
         @include atTabletsPortrait {
+            // box model
             justify-content: space-between;
             align-items: center;
         }
 
         @include atDesktop {
+            // box model
             justify-content: space-between;
         }
     }

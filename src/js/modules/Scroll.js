@@ -4,7 +4,6 @@ class Scroll {
     constructor() {
         this.link = $('.main-menu__link');
         this.events();
-        alert('dwdwd');
     }
         events() {
             this.link.click(function(e) {

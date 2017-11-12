@@ -1,20 +1,24 @@
 .spinner {
-    width: 80px;
-    height: 80px;
-    
-    border: 2px solid $white;
-    border-top:3px solid #65a447;
-    border-radius: 100%;
+    // positioning
     position: absolute;
     top:0;
     bottom:0;
     left:0;
     right: 0;
-    margin: auto;
     
+    // box model
+    width: 80px;
+    height: 80px;
+    margin: auto;
+
+    // visual
+    border: 2px solid $white;
+    border-top:3px solid #65a447;
+    border-radius: 100%;
     animation: spin 1s infinite linear;
 
     &__load {
+        // positioning
         @include centerer;
     }
 }
@@ -27,14 +31,19 @@
     }
 }
 #overlay {
-  height:100%;
-  width:100%;
-  background: $white;
+  // positioning
   position:fixed;
   left:0;
   top:0;
-  visibility: visible;
   z-index: 999;
+    
+  // box model
   display: flex;
   justify-content: center;
+  height:100%;
+  width:100%;
+
+  // visual
+  background: $white;
+  visibility: visible;
 }
