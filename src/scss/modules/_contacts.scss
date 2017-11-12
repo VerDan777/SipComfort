@@ -21,7 +21,11 @@
 
     &__wrapper {
         display: flex;
-        
+        flex-direction: column;
+
+        @include atTabletsLandscape {
+            flex-direction: row;
+        }
     }
 
     &__map {

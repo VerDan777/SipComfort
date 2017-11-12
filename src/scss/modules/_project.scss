@@ -70,23 +70,26 @@
 }
     &--first {
         background-image: url('./img/project3.png');
-        background-position: 0% 60%;
+        background-attachment: fixed;
+        // background-position: 0% 60%;
         background-repeat: no-repeat;
         // width: 934px;
         height: 500px;
         // order: 0;
     }
     &--second {
+        background-attachment: fixed;
         background-image: url('./img/project.png');
         // width: 375px;
         height: 500px;
-        background-position: 0% 20%;
+        // background-position: 0% 20%;
         background-repeat: no-repeat;
         // order: -1;
     }
     &--third {
+        background-attachment: fixed;
         background-image: url('./img/project2.png');
-        background-position: 0% 20%;
+        // background-position: 0% 20%;
         background-repeat: no-repeat;
         // width: 934px;
         height: 500px;
