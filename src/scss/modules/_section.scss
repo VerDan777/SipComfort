@@ -20,7 +20,7 @@
             @include atDesktop {
                 margin-left: 45px;
                 width: 520px;
-                margin-bottom: 30px;
+                margin-bottom: 15px;
             }
         }
         &--excellence {
@@ -30,10 +30,25 @@
 
             @include atDesktop {
                 width: 570px;
+                height: auto;
             }
         }
         &--news {
-            height: 150px;
+            // height: 150px;
+
+            @include atDesktop {
+                 margin-bottom: 0;
+                 height: auto;
+
+            }
+        }
+
+        &--contacts {
+            @include atDesktop {
+                height: auto;
+                margin-top: 50px;
+
+            }
         }
     }
     &__title {

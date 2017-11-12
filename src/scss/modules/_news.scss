@@ -5,21 +5,36 @@
     background-color: #f7f7f7;
     margin-bottom: 50px;
     padding: 0 20px;
+
+    @include atTabletsLandscape {
+        padding: 0;
+    }
     
     // padding-left: 200px; 
 
     &__container {
+        // box model
         display: flex;
     }
+
     &__right {
-        width: 700px;
+        // box model
+        // width: 700px;
         display: none;
         
         @include atDesktop {
-            display: block;
+            // box model
+         display: flex;
+         align-items: center;
         }
     }
+
+    &__bg {
+        width: 100%;
+       
+    }
     &__left {
+        /// box model
         margin: 30px 0;
         padding: 60px 0;
         background-color: #f7f7f7;
@@ -27,11 +42,18 @@
     }
 
     &__pic {
+        // box model
         display: none;
         box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.75);
 
         @include atTabletsPortrait {
+            // box model
             display: inline-block;
+        }
+
+        @include atDesktop {
+            width: 100%;
+            // height: 100%;
         }
     }
 }

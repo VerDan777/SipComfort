@@ -41,7 +41,8 @@
         @include atTabletsPortrait {
             // box model
             width: 375px;
-            padding-right: 115px;
+            // padding-right: 115px;
+            padding-bottom: 75px;
         }
     }
     

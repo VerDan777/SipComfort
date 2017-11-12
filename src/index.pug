@@ -6,10 +6,16 @@ head
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     link(rel="stylesheet", href="styles.css")
     link(href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet")
+    link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
+    link(rel="icon" type="image/vnd.microsoft.icon" href="./img/icons/favicon.ico")
+    link(rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicon-16x16.png")
+    link(rel="manifest" href="/manifest.json")
+    link(rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5")
+    meta(name="theme-color" content="#ffffff")
     title SipComfort
 body
     #overlay
-        //- .logo--overlay: img(src="./img/logo.png")
         .spinner
     header.site-header#home
         nav.main-nav: .container
@@ -20,8 +26,10 @@ body
                     ul.main-menu__list
                         -var menu = ['Главная','Проекты', 'Цены', 'Технологии', 'Ответ', 'О компании','Контакты']
                         -var menuLinks = ['#home','#projects','#price','#techology','#feedback','#about', '#contacts']
+                        - var link = ['homelink','projectslink','pricelink','technologylink','feedback','aboutlink','contactslink']
+                        - var data = ['home', 'about','projects','price','technology','about', 'contact']
                             each item,key in menu
-                                li.main-menu__item: a.main-menu__link(href=menuLinks[key])=menu[key]
+                                li.main-menu__item: a.main-menu__link(href=menuLinks[key] data-link=data[key] id=link[key])=menu[key]
         section.hero: .container
             .hero__container
                 //- .hero__form
@@ -29,7 +37,7 @@ body
                     //-     .hero__build
                     //-         h3.hero__build-title Построим дом своей мечты вместе с СИПкомфорт
                     //-         p.hero__text Мы предлагаем нашим клиентам качественную и быструю постройку комфортабельных домов из СИП-панелей по вашим  и нашим проектам.
-                    //-     .hero__info
+                    //-     .hero__info\
                     //-         h2.hero__action Звоните сейчас!
                     //-         p.hero__text.hero__text--nopd Мы готовы ответить<br> на все ваши вопросы
                     //-         span.hero__call +7 (4012) 40-01-80
@@ -43,9 +51,9 @@ body
                     //-         a.button(href="#") Позвонить
                     //-         a.button(href="#") Написать
 
-                .hero__motto
-                    .hero__main-title Комфортные дома из сип-&nbsp;панелей от Производителя
-                    .hero__main-text Строительство домов и разработка проектной документации «ПОД КЛЮЧ» постройте дом своей мечты
+                //- .hero__motto
+                //-     .hero__main-title Комфортные дома из сип-&nbsp;панелей от Производителя
+                //-     .hero__main-text Строительство домов и разработка проектной документации «ПОД КЛЮЧ» постройте дом своей мечты
 
         section.features#about: .container
             .features__container
@@ -187,18 +195,19 @@ body
                 .news__right
                     .news_bg
                         img.news__pic(src="./img/news-bg.png")
-        section.contacts#contacts
-            .contacts__container
-                .section__block.section__block--contacts
-                    h4.section__title Наши контакты
-                    p.hero__action Адрес:
-                    span.hero__call Московский проспект 182. офис 110
-                    p.hero__action Телефон: 
-                    span.hero__call +7 (4012) 40-01-80, +7 (952) 112-03-04
-                    p.hero__action E-mal:
-                    span.hero__call sipcomfort@gmail.com
-            .contacts__map
-                .map
+        section.contacts#contacts: .container
+            .contacts__wrapper
+                .contacts__container
+                    .section__block.section__block--contacts
+                        h4.section__title Наши контакты
+                        p.hero__action Адрес:
+                        span.hero__call Московский проспект 182. офис 110
+                        p.hero__action Телефон: 
+                        span.hero__call +7 (4012) 40-01-80, +7 (952) 112-03-04
+                        p.hero__action E-mal:
+                        span.hero__call sipcomfort@gmail.com
+                .contacts__map
+                    .map
 
         footer.site-footer: .container
             .site-footer__container
@@ -209,7 +218,7 @@ body
                             -var menu = ['Главная','Проекты', 'Цены', 'Технологии', 'Ответ', 'О компании']
                             -var menuLinks = ['#home','#projects','#price','#techology','#feedback','#about']
                                 each item,key in menu
-                                    li.main-menu__item: a.main-menu__link.main-menu__link--footer(href=menuLinks[key])=menu[key]
+                                    li.main-menu__item.main-menu__item--footer: a.main-menu__link.main-menu__link--footer(href=menuLinks[key])=menu[key]
                     p.site-footer__text Мы предлагаем нашим клиентам качественную и быструю постройку комфортабельных домов из СИП-панелей по вашим и нашим проектам. Наша стройгруппа способна решать вопросы монтажа и вести генподряд под "чистый ключ".
                 .site-footer__block
                     .socials

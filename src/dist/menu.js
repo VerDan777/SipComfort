@@ -10342,11 +10342,16 @@ var _Map = __webpack_require__(4);
 
 var _Map2 = _interopRequireDefault(_Map);
 
+var _Scroll = __webpack_require__(5);
+
+var _Scroll2 = _interopRequireDefault(_Scroll);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mobilemenu = new _MobileMenu2.default();
 var spinner = new _Spinner2.default();
 var map = new _Map2.default();
+var scroll = new _Scroll2.default();
 
 /***/ }),
 /* 2 */
@@ -10479,6 +10484,54 @@ var Map = function Map() {
 };
 
 exports.default = Map;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Scroll = function () {
+    function Scroll() {
+        _classCallCheck(this, Scroll);
+
+        this.link = (0, _jquery2.default)('.main-menu__link');
+        this.events();
+        alert('dwdwd');
+    }
+
+    _createClass(Scroll, [{
+        key: 'events',
+        value: function events() {
+            this.link.click(function (e) {
+                e.preventDefault();
+                var section = (0, _jquery2.default)(this).attr("href");
+                (0, _jquery2.default)("html, body").animate({
+                    scrollTop: (0, _jquery2.default)(section).offset().top
+                });
+            });
+        }
+    }]);
+
+    return Scroll;
+}();
+
+exports.default = Scroll;
 
 /***/ })
 /******/ ]);

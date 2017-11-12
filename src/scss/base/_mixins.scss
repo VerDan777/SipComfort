@@ -22,6 +22,12 @@
     }
 }
 
+@mixin atDesktopLarge {
+    @media(min-width: 1600px) {
+        @content;
+    }
+}
+
 // Positioning
 
 @mixin centerer {

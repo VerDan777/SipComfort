@@ -16,14 +16,14 @@
 
     @include atTabletsPortrait {
         // positioning
-        right: 15px;
-        top: 15px;
+        // right: 15px;
+        top: 35px;
 
         // visual
-        background-color: $white;
-        box-shadow: 0 0 0 2px rgba($accent, 1);
+        // background-color: $white;
+        // box-shadow: 0 0 0 2px rgba($accent, 1);
     }
-     @include atDesktop {
+     @include atTabletsLandscape {
         // box model
         display: none;
     }

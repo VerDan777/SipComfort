@@ -3,7 +3,7 @@
     // display: none;
 
     position: fixed;
-    left: -300px;
+    left: -900px;
     bottom: 0;
     top: 0;
     visibility: hidden;
@@ -11,7 +11,23 @@
     padding: 100px 0;
     z-index: 4;
     background-color: rgba($white, 1);
-    transition: 0.3s ease-in all;
+    transition: 0.35s ease-in all;
+
+    @include atTabletsPortrait {
+
+        // left: -900px;
+    }
+
+    @include atTabletsLandscape {
+
+       visibility: visible;
+       z-index: 0;
+       background: none;
+       position: static;
+       width: auto;
+       padding: 0;
+       transition: none;
+    }
 
 
     &--shown {
@@ -27,6 +43,10 @@
 
     &--header {
         display: none;
+
+        @include atTabletsLandscape {
+            display: block;
+        }
     }
     
     &__list {
@@ -43,6 +63,14 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
+
+            @include atTabletsLandscape {
+                // flex-direction: row;
+            }
+            @include atDesktop {
+                flex-direction: row;
+                justify-content: center;
+            }
         }
     }
 
@@ -53,7 +81,26 @@
         padding-bottom: 25px;
         // display: flex;
         // flex-direction
-        // padding-right: 45px;
+
+        @include atTabletsLandscape {
+            // box model
+            padding-right: 15px;
+            padding-bottom: 0px;
+        }
+        @include atDesktop {
+            padding-right: 45px;
+        }
+
+        &--footer {
+
+            @include atTabletsLandscape {
+                padding-bottom: 25px;
+            }
+
+            @include atDesktop {
+                padding-right: 45px;
+            }
+        }
     }
 
     &__link {
@@ -68,6 +115,7 @@
 
         &--footer {
             @include font(#000000,$mainFontSemiBold,0.875rem, bold);
+           
         }
     }
 }
