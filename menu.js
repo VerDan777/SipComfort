@@ -10512,7 +10512,6 @@ var Scroll = function () {
 
         this.link = (0, _jquery2.default)('.main-menu__link');
         this.events();
-        alert('dwdwd');
     }
 
     _createClass(Scroll, [{
