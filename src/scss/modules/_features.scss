@@ -74,9 +74,13 @@
         position: relative;
 
         // box model
-        padding-bottom: 150px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 250px;
         flex-direction: column;
         justify-content: center;
+        // align-items: flex-end;
+        // display: flex;
 
         @include atTabletsLandscape {
             // box model
@@ -86,7 +90,9 @@
         @include atDesktop {
             // box model
             padding-bottom: 50px;
-            width: 300px;
+            padding-left: 0;
+            padding-right: 0;
+            // width: 300px;
         }
 
         @include atDesktopLarge {
@@ -103,7 +109,7 @@
         text-align: center;
 
         // typography
-        @include font(#65a447,$mainFont, 1.125rem, 300);
+        @include font(#65a447,$mainFont, 1.75rem, 300);
         text-transform: uppercase;
         letter-spacing: 2px;
         
@@ -121,7 +127,7 @@
 
     &__text {
         // typography
-        @include font(#7e8082,$mainFont, 0.9rem, 300);
+        @include font(#7e8082,$mainFont, 1.125rem, 300);
         text-align: center;
 
         @include atDesktop {
@@ -141,7 +147,7 @@
         // box model
         display: block;
         margin: 0 auto;
-        width: 15%;
+        width: 45%;
         
         @include atDesktop {
             // positinoning

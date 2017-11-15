@@ -15,7 +15,7 @@
     }
 
     &::after {
-        content: url('./img/sip2.png');
+        // content: url('./img/sip2.png');
 
         // positioning
         position: absolute;
@@ -52,12 +52,12 @@
         // box model
         display: block;
         padding: 5px 0;
-        text-align: center;
 
         // typography
-        @include font(#6ea447, $mainFont,1.125rem, 300);
+        @include font(#6ea447, $mainFont,1.75rem, 300);
         text-transform: uppercase;
         letter-spacing: 2px;
+        text-align: center;
 
         @include atDesktop {
             // box model
@@ -66,9 +66,13 @@
     }
 
     &__text {
-        @include font(#000000,$mainFont, 1rem, 300);
-        text-align: left;
-        line-height: 1.8;
+        @include font(#000000,$mainFont, 1.125rem, 300);
+        text-align: center;
+        line-height: 1.6;
+
+        @include atDesktop {
+            text-align: left;
+        }
     }
 
     &__block {
@@ -113,7 +117,10 @@
         // box model
         display: inline-block;
         text-align: center;
-        padding-bottom: 150px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 250px;
+        
 
         @include atTabletsLandscape{
             // box model
@@ -136,16 +143,16 @@
         // box model
         display: block;
         margin: 0 auto;
-        width: 15%;
+        width: 45%;
 
         @include atDesktop {
             // positioning
             position: absolute;
-            top: 10px;
+            top: 20px;
             left: -50px;
 
             // box model
-            width: 11%;
+            width: 13%;
         }
 
     }

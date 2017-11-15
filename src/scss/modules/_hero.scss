@@ -3,15 +3,15 @@
     position: relative;
 
     // box model
-   min-height: 90vh;
-   width: 100%;
+    min-height: 90vh;
+    width: 100%;
 
     // visual
     background-image: url('./img/bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    box-shadow: 0px 70px 67px -20px rgba(0,0,0,0.24);
+    box-shadow: 0px 30px 60px -20px rgba(0,0,0,0.24);
 
     @include atTabletsLandscape {
         // box model
@@ -151,7 +151,7 @@
 
     &__action {
         // typography
-        @include font(#c2ecae,$mainFontSemiBold,1.1rem, 500);
+        @include font(#65a447,$mainFontSemiBold,1.1rem, 500);
         text-transform: uppercase;
         letter-spacing: 2px;
         // box model

@@ -3,7 +3,7 @@
     &__block {
         // box model
         margin-bottom: 100px;
-        padding-left: 20px;
+        padding: 0  20px;
 
         // visual
         border-left: 2px solid $accent;
@@ -17,6 +17,11 @@
         &--center {
             // box model
             margin-top: 20px;
+            margin-left: 20px;
+
+            @include atDesktop {
+                // margin-left: 170px;
+            }
         }
         &--advantages {
             // box model

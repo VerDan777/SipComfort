@@ -17,8 +17,24 @@
         }
 
         @include atDesktop {
+            // positioning
+            position: relative;
+
             // box model
+            display: inline-block;
+            vertical-align: top;
+            width: 500px;
+            margin-top: 30px;
+            margin-bottom: -30px;
+            margin-right: -110px;
+            background-color: #ffffff;
             padding: 0;
+            
+            z-index: 1;
+
+            // visual
+            box-shadow: 0 22px 24px -10px rgba(20, 41, 69, 0.4);
+
         }
     }
 

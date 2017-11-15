@@ -3,10 +3,17 @@
     &--header {
         // positioning
         position: relative;
+        padding: 0 20px;
+        padding-top: 15px;
 
         // box model
-        max-width: 200px;
+        max-width: 150px;
         max-height: 100px;
+
+        @include atTabletsPortrait {
+            // box model
+            max-width: 200px;
+        }
 
 
         img {

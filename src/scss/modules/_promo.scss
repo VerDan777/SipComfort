@@ -24,7 +24,7 @@
         right: 0;
 
         // visual
-        background-color: rgba($form, 0.3);
+        background-color: rgba($form, 0.6);
     }
 
     &__container {
@@ -52,8 +52,9 @@
         display: inline-block;
 
         // typography
-        @include font($white,$mainFont,24px,300);
+        @include font($white,$mainFont,1.5rem,100);
         text-transform: uppercase;
+        letter-spacing: 2px;
 
         @include atDesktop {
             // box model

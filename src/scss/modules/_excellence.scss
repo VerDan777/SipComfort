@@ -64,6 +64,30 @@
         }
     }
 
+    &__title {
+        // box model
+        display: block;
+        padding: 5px 0;
+        text-align: center;
+
+        // typography
+        @include font(#6ea447, $mainFont,1.75rem, 300);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: left;
+
+        @include atDesktop {
+            // box model
+            text-align: left;
+        }
+    }
+
+    &__text {
+         @include font(#000000,$mainFont, 1.125rem, 300);
+        text-align: left;
+        line-height: 1.6;
+    }
+
     &__description {
 
         @include atDesktop {

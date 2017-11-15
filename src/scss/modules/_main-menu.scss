@@ -1,7 +1,7 @@
 .main-menu {
     // positioning
     position: fixed;
-    left: -900px;
+    left: -100px;
     bottom: 0;
     top: 0;
     z-index: 4;
@@ -13,7 +13,7 @@
     // visual
     visibility: hidden;
     background-color: rgba($white, 1);
-    transition: 0.35s ease-in all;
+    // transition: 0.35s ease-in all;
 
     @include atTabletsPortrait {
 
@@ -75,6 +75,8 @@
                 // flex-direction: row;
             }
             @include atDesktop {
+                padding-top: 20px;
+                padding-bottom: 20px;
                 flex-direction: row;
                 justify-content: center;
                 
@@ -121,6 +123,7 @@
         @include font(#4b4e53,$mainFontThin,1rem, 300);
         text-transform: uppercase;
         text-decoration: none;
+        letter-spacing: 1px;
 
         &::before {
             // positioning
@@ -135,7 +138,7 @@
 
             // visual
             visibility: hidden;
-            background-color: #4b4e53;
+            background-color: #65a447;
             transform: scaleX(0);
             transition: 0.3s ease-in-out all 0s;
         }

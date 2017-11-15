@@ -106,9 +106,12 @@
 
     &__content {
         // box model
-        display: block;
-        padding: 20px 0;
+        display: inline-block;
+        padding: 20px 20px;
         width: 100%;
+        box-sizing: border-box;
+        @include font(#7e8082,$mainFont, 1rem, 300);
+        line-height: 1.6;
 
         // visual
         border: 1px solid #e5e5e5;
